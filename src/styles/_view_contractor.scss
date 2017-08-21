@@ -1,0 +1,167 @@
+.app-contractor-styles {
+  display: flex;
+  width: 100%;
+
+  &__info {
+    position: relative;
+    width: 100%;
+  }
+
+  &__not-found {
+    margin-top: 1px;
+  }
+}
+
+.app-contractor-information {
+  width: 50%;
+  min-height: 300px;
+  display: flex;
+
+  &_height {
+    min-height: 320px;
+  }
+
+  &:first-child {
+    margin-right: 2%;
+  }
+
+  &-block {
+    height: 100%;
+
+    &:first-child {
+      width: 64%;
+      margin-right: 4%;
+      margin-left: 15px;
+    }
+
+    &_link {
+      padding: 12px 0 5px 0;
+    }
+
+    &_data {
+      padding-left: 0;
+    }
+
+    &__image-contractor {
+      width: 240px;
+      height: 240px;
+      background-color: #3f424a;
+      margin-bottom: 15px;
+
+      &-content {
+        width: 240px;
+        height: 240px;
+        background-image: url("../images/camera.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+      }
+    }
+
+    &__more-info {
+      margin-top: 26px;
+      color: hsla(0,0%,100%,.6);
+
+      & td {
+        margin: 0;
+        padding-top: 10px;
+      }
+
+      &_values {
+        padding-left: 10px;
+        color: #ffffff;
+      }
+
+      &_no-data {
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+.app-contractor-note {
+  width: 50%;
+
+  &:first-child {
+    margin-right: 4%;
+  }
+}
+
+.correct-position-contractor-logo {
+  width: 40px;
+  background-position: 60% 32px;
+}
+
+.app-table-contractor {
+  border-radius: 0 4px 4px 4px;
+  margin-top: 1px;
+    &>tbody>tr>td{
+      border-bottom: 1px solid $color-form-border;
+    }
+}
+
+.app-table-users{
+  background: $color-new-account;
+  margin-top: 1px;
+  &__phones{
+    min-width: 240px;
+  }
+  &>thead>tr>th {
+  padding: 4px 8px;
+  vertical-align: middle;
+  border-bottom: none;
+  text-align: center;
+  font-weight: $weight-bold;
+    &:first-child{
+      text-align: left;
+      padding-left: 20px;
+    }
+    &:nth-child(4), &:nth-child(5), &:last-child{
+      min-width: 80px;
+      max-width: 100px;
+    }
+  }
+  &>tbody>tr>td {
+  padding: 15px 0 15px 20px;
+  border-bottom: 1px solid $color-form-border;
+    &:nth-child(4), &:nth-child(5), &:last-child{
+      vertical-align: middle;
+      text-align: center;
+      padding-left: 0;
+      min-width: 80px;
+      max-width: 120px;
+      border-left: 1px solid $color-form-border;
+    }
+    &:nth-child(3) {
+      padding-right: 20px;
+      & table tr>td:first-child {
+        min-width: 115px;
+      }
+    }
+    &:first-child {
+      min-width: 200px;
+    }
+  }
+  & table tr>td {
+    vertical-align: initial;
+    &:first-child {
+      color: $color-inactive;
+      padding-right: 10px;
+    }
+  }
+}
+
+.app-table-contractor tr:not(.app-devices-table__device-type) {
+  background: $color-active-tab
+}
+
+.app-table-contractor tr:not(.app-devices-table__device-type):nth-child(2n+1) {
+    background: #393b42;
+}
+
+.app-table-contractor tr:not(.app-devices-table__device-type) td:first-child{
+  padding-left: 15px;
+}
+
+.app-contractors-nav.nav-tabs>li.active>a:after, .app-contractors-nav.nav-tabs>li.active>a:focus:after, .app-contractors-nav.nav-tabs>li.active>a:hover:after {
+    height: 6px;
+}

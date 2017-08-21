@@ -1,0 +1,45 @@
+$width-login: 570px;
+$width-nav:50px;
+$width-account-notes: calc(100% - 60px);
+$height-header:78px;
+$color-nav:#24262D;
+$color-header:#3D3F48;
+$color-content:#2D3038;
+$color-active:#00B4FA;
+$color-border:#282A30;
+$color-search-panel:rgba(44, 62, 80, 0.5);
+$color-active-tab:#3D3F47;
+$color-new-account:#353840;
+$color-table-title: #4b4c54;
+$color-title-border:rgba(255,255,255,0.3);
+$color-form-border: rgba(255,255,255,0.1);
+$color-inactive:rgba(255,255,255,0.6);
+$color-delete:#9B3E3E;
+$color-warning: #FF5757;
+$color-label-green: #67BD5E;
+$color-label-yellow: #edcb3a;
+$color-info-field: #30323A;
+$width-new-account-form:870px;
+$width-search-input:90%;
+$max-width-search-input:1170px;
+$width-view-account-icon:60px;
+$width-view-account-info:calc(100% - #{$width-view-account-icon});
+$color-close-row:inherit;
+$weight-light:300;
+$weight-regular:400;
+$weight-bold:700;
+$weight-black:900;
+$opacity-effect:1.5s;
+
+@mixin border-shadow($top:0, $left:0, $blur:10px, $color:black) {
+  box-shadow: $top $left $blur $color;
+}
+    
+@mixin header-line($width:6px, $color:$color-active){
+  border-left: $width solid $color;
+}    
+
+@mixin breakWord($width){
+   word-wrap: break-word;
+   max-width: $width;
+}

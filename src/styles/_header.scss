@@ -1,0 +1,45 @@
+.app-header {
+    z-index: 5;
+    height: $height-header;
+    width: 100%;
+    background: $color-header;
+    //position: fixed;
+    box-shadow: 0 2px 2px 0 black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    &__logo {
+        position: absolute;
+        top: 20px;
+        left: 55px;
+        width: 240px;
+        display: flex;
+        justify-content: space-between;
+        &-img{
+            height:45px;
+            width:45px;
+        }
+        &-title {
+            width: 80%;
+            font-weight: $weight-black;
+            size: 18px;
+            min-width: 190px;
+            margin-left: 10px;
+        }
+    }
+    &__logout {
+        position: absolute;
+        top: 24px;
+        right: 65px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 21px;
+        &-img {
+            margin-top: 3px;
+            margin-left:10px;
+        }
+        &-name{
+            font-weight: $weight-regular;
+        }
+    }
+}

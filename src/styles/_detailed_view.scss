@@ -1,0 +1,149 @@
+.app-detailed{
+	&__wrapper{
+		background:$color-new-account;
+		border-radius: 6px;
+		@include border-shadow();
+		padding: 20px 20px 20px 15px;
+		width:100%;
+		min-height: 400px;
+	}
+	&__button-container{
+		float:right;
+		margin-top:15px;
+		margin-left:30px;
+	}
+	&__button{
+		min-width: 90px;
+		height: 33px;
+		color: white;
+		margin-left: 25px;
+		&--shadow{
+			@include border-shadow();
+		}
+		&--blue{
+			background: $color-active;
+		}
+		&--red{
+			background: $color-delete;
+		}
+		&--gray{
+			background: $color-title-border;
+		}
+	}
+	&__info{
+		@include header-line();
+		&__img{
+			background-repeat: no-repeat;
+			background-position: 60% 50%;
+			background-size: 40px;
+			width: $width-view-account-icon;
+			min-height: 100%;
+			&--site{
+        background-image: url(../images/site.svg);
+        &_detail {
+          background-position: 60% 40px;
+        }
+			}
+			&--group-site{
+				background-image: url(../images/group_site.svg);
+			}
+			&--account{
+ 				background-image: url("./../images/group_site.svg");
+        &_detail {
+          background-position: 60% 35px;
+        }
+			}
+			&--contact{
+ 				background-image: url("./../images/contact.svg");
+        &_detail{
+          background-size: 35px;
+          background-position: 60% 30px;
+        }
+			}
+			&--company{
+ 				background-image: url("./../images/company.svg");
+        &_detail {
+          background-position: 60% 35px;
+        }
+			}
+      &--device{
+ 				background-image: url("./../images/fire.svg");
+			}
+      &--contractor{
+        background-image: url("./../images/contractor.svg");
+      }
+      &--contractor-user{
+        background-image: url("./../images/contractor_user.svg");
+			}
+			&--agent{
+				background-image: url("./../images/agent.svg");
+			}
+		}
+		&__data{
+			flex-direction: column;
+			width: $width-view-account-info;
+			padding-left: 10px;
+			color:$color-inactive;
+			&-contacts{
+				padding: 5px 0 10px;
+				color:white;
+			}
+			&-title{
+				font-size:32px;
+				font-weight: $weight-bold;;
+			}
+		}
+	}
+	&__notes{
+		padding: 13px 10px;
+		background: $color-content;
+		border: 1px solid $color-border;
+		border-radius: 4px;
+    overflow: hidden;
+	}
+	&__addition{
+		&-header{
+			width:100%;
+			height:60px;
+			padding-bottom: 10px;
+			border-bottom: 1px solid $color-title-border;
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+		}
+		&__container{
+			margin-top:20px;
+			&--large{
+				width:70%;
+			}
+			&--small{
+				width:27%;
+			}
+			&--extrasmall{
+				width:23%;
+			}
+			&--medium{
+				width:30.5%;
+			}
+			&__title{
+				background:$color-active-tab;
+				padding: 10px 20px 5px;
+				border-top-left-radius: inherit;
+				border-top-right-radius: inherit;
+				color:$color-inactive;
+				font-weight:$weight-bold;
+			}
+		}
+		&__content{
+			background:$color-new-account;
+			border-radius: 4px;
+			@include border-shadow();
+			&--account{
+				height: 400px;
+			}
+			&--medium{
+				height: 320px;
+			}
+		}
+	}
+}

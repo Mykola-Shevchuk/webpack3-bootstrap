@@ -1,0 +1,61 @@
+.app-service-form{
+	width:880px;
+	&__header-icon{
+		width: 30px;
+    margin-left: 10px;
+    padding-bottom: 5px;
+	}
+	&__devices{
+		height:200px;
+		background: $color-info-field;
+		border-radius: 4px;
+	}
+	&__text-field{
+		background: $color-info-field;
+		color: white;
+		border: none;
+	}
+	&__table{
+		margin-bottom: 0;
+	}
+}
+
+.app-service-label {
+  min-width: 200px;
+  height: 27px;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 27px;
+  font-weight: $weight-regular;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+	cursor: pointer;
+	vertical-align: text-bottom;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &--yellow {
+    background-color: $color-label-yellow;
+  }
+
+  &--blue {
+    background-color: $color-active;
+  }
+
+  &--green {
+    background-color: $color-label-green;
+  }
+
+  &--red {
+    background-color: #ff5757;
+  }
+
+  &--small {
+    min-width: 75px;
+    text-transform: none;
+  }
+}

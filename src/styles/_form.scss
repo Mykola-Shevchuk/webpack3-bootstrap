@@ -1,0 +1,83 @@
+.app-form{
+    margin:20px auto;
+    width:$width-new-account-form;
+    padding-bottom:30px;
+    background: $color-new-account;
+    &--wide{
+        width:755px;
+    }
+    &--roles{
+        width:970px;
+    }
+    &--flex{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    &--bordered{
+        border: 1px solid $color-border;
+        border-radius: 6px;
+        @include border-shadow();
+    }
+    &-button {
+        width:122px;
+        height:44px;
+        margin-top: 30px;
+        background: $color-active;
+        padding: 0;
+        border: none;
+        &--right{
+            float:right;
+        }
+        &--indent{
+            margin-left:25px;
+        }
+        &--grey{
+            background: $color-title-border;
+            line-height: 3.1;
+            color: white
+        }
+    }
+    &-input{
+        &--medium{
+            width:48%;
+        }
+        &--large{
+            width:70%;
+        }
+        &--big{
+            width:65%;
+        }
+        &--third {
+          width: 31%;
+        }
+        &--small{
+            width:27%;
+        }
+    }
+    &-header{
+        color:$color-title-border;
+        font-weight: $weight-bold;
+        font-size: 24px;
+        padding:20px 0;
+        padding-left: 55px;
+        background: $color-active-tab;
+        width: 100%;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+        margin-bottom:30px;
+    }
+    &-error{
+		width: $width-new-account-form;
+		padding: 20px;
+		margin:0 auto 20px;
+    }
+    &-dropdown{
+        &--medium{
+            width:48%;
+        }
+        &--small{
+            width:26%;
+        }
+	}
+}

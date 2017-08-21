@@ -1,0 +1,225 @@
+.municipalities-styles {
+  &__wrapper {
+    justify-content: flex-start;
+  }
+
+  &__contacts-nav {
+    vertical-align: text-bottom;
+
+    & span:first-child {
+      padding-right: 10px;
+    }
+  }
+
+  &__main-info {
+    margin-bottom: 70px;
+    justify-content: flex-start;
+  }
+
+  &_min-height {
+    min-height: 360px;
+  }
+
+  &_icons {
+    width: 25px;
+  }
+}
+
+.municipalities-name-block {
+  width: 25%;
+  min-width: 300px;
+  margin-right: 2%;
+
+  &__content {
+    min-height: 320px;
+    border-left: 6px solid #00b4fa;
+  }
+}
+
+.municipalities-logo {
+  width: 40px;
+  background-image: url(../images/municipalities.svg);
+  background-position: 60% 36px;
+  background-repeat: no-repeat;
+  height: 100px;
+  margin: 0 15px 0 25px;
+}
+
+.municipalities-id {
+  color: hsla(0,0%,100%,.6);
+}
+
+.municipalities-title {
+  margin-top: 10px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.municipalities-separate-line {
+  border-bottom: 1px solid hsla(0,0%,100%,.1);
+  margin: 30px 0 15px 15px
+}
+
+.municipalities-site-link {
+  margin-left: 25px;
+}
+
+.municipalities-contacts-block {
+  width: 40%;
+  margin-right: 2%;
+
+  &__wrapper {
+    overflow-y: hidden;
+  }
+
+  &__list {
+    font-size: 14px;
+  }
+
+  &__list-element {
+    padding: 15px;
+    border-bottom: 1px solid hsla(0,0%,100%,.1);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &__separator {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &_scroll-height {
+    height: 323px;
+  }
+}
+
+.municipalities-other-block {
+  width: 15%;
+  min-width: 200px;
+
+  &:last-child {
+    margin-left: 2%;
+  }
+}
+.municipalities-department-nav {
+  padding-left: 10px;
+
+  & img {
+    width: 20px;
+  }
+}
+
+.municipalities-devices {
+  min-height: 200px;
+  margin: 30px 0;
+  padding: 0;
+
+  &__title {
+    align-items: center;
+    padding: 5px 15px 5px;
+  }
+
+  &__title-radius {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+
+  &__content {
+    padding: 40px 15px 50px;
+    justify-content: flex-start;
+    &-agent{
+      padding-top:20px;
+    }
+  }
+}
+.municipalities-department-no-content {
+  height: 320px;
+  background-color: #30323a;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+
+.municipalities-department-channels {
+  width: 55%;
+  margin-right: 2%;
+
+  &__title {
+    padding-top: 13px;
+  }
+
+  &__content {
+    margin-top: 10px;
+  }
+}
+
+.department-channels-is-agent {
+  height: 320px;
+  background-color: $color-info-field;
+  font-size: 32px;
+  line-height: 320px;
+  text-align: center;
+}
+
+.municipalities-department-contacts {
+  width: 43%;
+
+  &__content {
+    margin-top: 10px;
+    max-height: 320px;
+    min-height: 320px;
+    background-color: $color-info-field;
+    font-size: 14px;
+  }
+
+  &__colored-line {
+    background-color: #2a2c33;
+  }
+}
+
+.municipalities-agent {
+  margin: 20px 0;
+}
+
+.municipalities-department-agent-title-line {
+  font-size: 24px;
+  padding-left:15px;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: calc(100% - 198px);
+    vertical-align: middle;
+    border-bottom: 1px solid $color-title-border;
+  }
+}
+
+.municipalities-department-agent-title {
+  &_icon-size {
+    width: 30px;
+  }
+}
+
+.municipalities-channel-table {
+  background-color: $color-info-field;
+  min-height: 320px;
+
+  & table  td, th {
+    padding: 18px 8px;
+  }
+
+  & table  th:first-child {
+    padding-left: 20px;
+  }
+
+  &__data-channel{
+    max-width: 420px;
+  }
+}
+
+.municipalities-related-accounts {
+  margin-top: 20px;
+}

@@ -1,0 +1,41 @@
+@mixin stitches-sprite($x: 0, $y: 0, $width: 0, $height: 0) {
+    background-position: $x $y;
+    width: $width;
+    height: $height;
+}
+
+.sprite {
+    background-image: url("../images/spritesheet.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    min-width: 20px;
+
+    &--address {
+        @include stitches-sprite(-5px, -5px, 19px, 13px);
+    }
+
+    &--company {
+        @include stitches-sprite(-28px, -5px, 19px, 16px);
+        margin-right: 4px;
+    }
+
+    &--dog {
+        @include stitches-sprite(-57px, -5px, 19px, 13px);
+    }
+
+    &--fax {
+        @include stitches-sprite(-80px, -5px, 19px, 12px);
+    }
+
+    &--mail {
+        @include stitches-sprite(-102px, -5px, 19px, 8px);
+    }
+
+    &--mobile {
+        @include stitches-sprite(-121px, -5px, 19px, 14px);
+    }
+
+    &--phone {
+        @include stitches-sprite(-141px, -5px, 19px, 14px);
+    }
+}

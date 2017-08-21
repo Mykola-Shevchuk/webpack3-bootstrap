@@ -16,7 +16,7 @@ const cssDev = [
 		options: {
 			// Provide path to the file with resources
 			resources: [
-                './src/resources.scss'
+                './src/styles/resources.scss'
             ],
 		},
 	}];
@@ -28,7 +28,7 @@ const cssProd = ExtractTextPlugin.extract({
             minimize: true,
 			// Provide path to the file with resources
 			resources: [
-				'./src/resources.scss'
+				'./src/styles/resources.scss'
 			],
 		},
 	}],
@@ -74,7 +74,6 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, "dist"),
         compress: true,
-        hot: true,
         open: true,
         stats: 'errors-only'
     },

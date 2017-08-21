@@ -1,0 +1,30 @@
+.app-modal{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  height: 100%;
+	margin:0 auto;
+	&__footer{
+		padding: 20px;
+    align-self: flex-end;
+		&--right{
+			float:right;
+			padding: 20px 0;
+		}		
+	}
+	&__content{
+		background: $color-active-tab;
+	  display: flex;
+    flex-direction: column;
+    text-align: center;
+		width: 450px;
+		@include border-shadow();
+	}
+	&__body{
+		font-size: 20px;
+    padding: 20px;
+	}
+	&__form{
+		padding: 0 40px;
+	}
+}

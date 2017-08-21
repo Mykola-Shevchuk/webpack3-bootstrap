@@ -1,0 +1,482 @@
+/*MEDIA QUERIES*/
+
+/*SIZES*/
+$x-large-width: 1900px;
+$larger-width: 1750px;
+$large-width: 1600px;
+$middle-width: 1440px;
+$small-width: 1340px;
+
+/*DEVICE*/
+
+/*MAX-WIDTH 1900*/
+@media screen and (max-width: $x-large-width) {
+  /*for _view_contractors_users*/
+  .app-contractor-users-profile {
+    width: 66%;
+
+    &__table {
+      &_mail {
+        width: auto;
+        margin-right: 0;
+      }
+
+      &_cells {
+        margin-top: 0;
+      }
+
+      & td:nth-child(odd) {
+        min-width: 130px;
+        width: 130px;
+      }
+
+      &_styles {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .app-contractor-users-block {
+    &:last-child {
+      width: 32%;
+    }
+  }
+
+}
+
+/*MAX-WIDTH 1750*/
+@media screen and (max-width: $larger-width) {
+  /*for _view_account*/
+  .app-ext-style {
+    &_account-main {
+      padding-left: 0;
+      display: block;
+    }
+  }
+
+}
+
+/*MAX-WIDTH 1600*/
+@media screen and (max-width: $large-width) {
+  /*for _view_account*/
+  .app-contact-list {
+    &__table tr>td:first-child .app-contact-main__line {
+      font-size: 13px;
+    }
+  }
+
+  .app-ext-style {
+    &_account-add {
+      padding-left: 0;
+      font-size: 12px;
+    }
+  }
+  /*for _device*/
+  .app-device-styles {
+    width: 78%;
+  }
+
+  .app-device-styles-equipment {
+    width: 20%;
+    margin-left: 2%;
+  }
+
+  .device-block-width {
+    &:last-child {
+      min-width: 310px;
+    }
+
+    &__no-data {
+      width: 310px;
+    }
+  }
+
+  .device-block-notes {
+    &:last-child {
+      min-width: 310px;
+    }
+  }
+  /*for _view_contractor*/
+  .app-contractor-information {
+    &_data-title{
+      font-size:28px;
+    }
+    &-block:first-child {
+      max-width: 52%;
+    }
+  }
+  /*for _view_contractors_users*/
+  .correct-position-contractor-user-logo {
+    background-position: 60% 27px;
+  }
+
+  .app-contractor-users-profile {
+    width: 65%;
+  }
+
+  .app-contractor-users-block {
+    &:last-child {
+      width: 33%;
+    }
+  }
+  /*for _view_municipalities*/
+
+  .municipalities-styles {
+    &__colored-line {
+      max-width: 330px;
+    }
+  }
+
+  .municipalities-title {
+    font-size: 27px;
+  }
+
+  .municipalities-logo {
+    width: 35px;
+    background-position: 60% 34px;
+  }
+
+  .municipalities-contacts-block {
+    &__separator {
+      width: 100%;
+      display: block;
+    }
+  }
+  /*for _view_agent*/
+
+  .app-table-channels {
+    &__title-channel {
+      width: 400px;
+    }
+  }
+
+  .municipalities-channel-table__sendto {
+    @include breakWord(300px);
+  }
+
+}
+
+/*MAX-WIDTH 1440*/
+@media screen and (max-width: $middle-width) {
+  /*for _view_account*/
+  .app-contact-list {
+    &__table tr>td:first-child .app-contact-main__line {
+      font-size: 14px;
+    }
+  }
+
+  .app-ext-style {
+    &_account-add {
+      padding-left: 0;
+      font-size: 14px;
+      display: block;
+    }
+  }
+
+  .app-device {
+
+    &__info {
+      &__data {
+        width: calc(100% - 50px);
+        padding-left: 0;
+
+        &-title {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+  .correct-position-site-img {
+    background-position: 60% 25px;
+    background-size: 60%;
+  }
+
+  .device-block-width {
+    &:last-child {
+      min-width: 280px;
+    }
+
+    &__no-data {
+      width: 280px;
+    }
+  }
+
+
+  .device-block-notes {
+    &:last-child {
+      min-width: 280px;
+    }
+  }
+
+  .primary-account-block {
+    width: 100%;
+
+    &__separator {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &__content {
+        width: 100%;
+        display: block;
+
+        &_phone {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+  /*for _view_contractor*/
+  .app-contractor-information {
+    &_data-title {
+      font-size: 25px;
+    }
+
+    &_data-id {
+      font-size: 15px;
+    }
+
+    &_data-address {
+      font-size: 15px;
+    }
+
+    &-block {
+      &__more-info {
+        font-size: 15px;
+      }
+    }
+
+    &-block:first-child {
+      max-width: 49%;
+    }
+  }
+
+  .correct-position-contractor-logo {
+    background-position: 60% 27px;
+  }
+  /*for _view_contractors_users*/
+  .app-contractor-users-profile {
+    width: 61%;
+
+    &__photos {
+      max-height: 510px;
+      flex-direction: column;
+
+      &-block:first-child {
+        margin-right: 0;
+      }
+
+      &-block:last-child {
+        margin-top: 15px;
+      }
+
+      &-title {
+        margin-bottom: 10px;
+        color: hsla(0,0%,100%,.6);
+      }
+    }
+
+    &__block {
+      width: calc(100% - 215px - 15px - 2%);
+    }
+  }
+
+  .app-contractor-users-block {
+    &:last-child {
+      width: 37%;
+    }
+  }
+
+  .correct-position-contractor-user-logo {
+    background-position: 60% 23px;
+  }
+
+  /*for _view_municipalities*/
+  .municipalities-id {
+    font-size: 14px;
+  }
+
+  .municipalities-title {
+    font-size: 23px;
+  }
+
+  .municipalities-logo {
+    width: 30px;
+    background-position: 60% 31px;
+  }
+
+  .app-devices-table__header-company{
+    min-width: 115px;
+  }
+
+  .department-channels-is-agent {
+    font-size: 28px;
+  }
+  /*for _view_agent*/
+
+  .app-table-channels {
+    &__title-channel {
+      width: 300px;
+    }
+  }
+
+  .municipalities-channel-table__sendto {
+    @include breakWord(200px);
+  }
+  /*for _view_opportunity*/
+  .button__opportunity {
+    margin-left: 0;
+
+    & a {
+      margin-left: 0;
+    }
+  }
+
+}
+
+/*MAX-WIDTH 1340*/
+@media screen and (max-width: $small-width) {
+
+  .app-device-styles {
+    &__ico {
+      &--title {
+        background-position: 60% 10px;
+        background-size: 21px;
+        padding: 0;
+        width: 30px;
+
+        &-small {
+          background-position: 60% 7px;
+        }
+      }
+    }
+  }
+
+  .app-device {
+    &__info {
+      &__data-id {
+        font-size: 15px;
+      }
+
+      &__data {
+        width: calc(100% - 40px);
+        padding-left: 0;
+
+        &-title {
+          font-size: 20px;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .correct-position-site-img {
+    background-position: 60% 27px;
+    background-size: 70%;
+    width: 40px;
+    padding-left: 0;
+  }
+
+  /*for _view_contractor*/
+  .app-contractor-information {
+    &_data-title {
+      font-size: 23px;
+    }
+
+    &-block:first-child {
+      max-width: 44%;
+    }
+
+    &_data-id {
+      font-size: 13px;
+
+      & span.label {
+        margin-left: 5px;
+      }
+    }
+
+    &_data-address {
+      font-size: 13px;
+    }
+
+    &-block {
+      &_data {
+        width: calc(100% - 50px);
+      }
+
+      &__more-info {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .correct-position-contractor-logo {
+    background-position: 60% 22px;
+  }
+  /*for _view_contractors_users*/
+  .app-contractor-users-profile {
+    width: 58%;
+  }
+
+  .app-contractor-users-block {
+    &:last-child {
+      width: 40%;
+    }
+  }
+
+  .correct-position-contractor-user-logo {
+    background-position: 60% 20px;
+  }
+  /*for _view_municipalities*/
+  .municipalities-id {
+    font-size: 13px;
+  }
+
+  .municipalities-logo {
+    width: 30px;
+    background-position: 60% 30px;
+  }
+
+  .app-devices-table__header-company{
+    min-width: 90px;
+  }
+
+  .app-agent__information-data{
+    margin-left: 52px;
+  }
+  /*for _view_opportunity*/
+  .app-opportunities-table-filter {
+    &__inputs {
+      &--date {
+        width: 125px;
+      }
+    }
+  }
+
+  .app-opportunities-table-filter__inputs .bootstrap-select>.dropdown-toggle {
+    width: 135px;
+  }
+
+  .app-opportunities-table-filter__inputs .bootstrap-select.btn-group .dropdown-menu {
+    min-width: 135px;
+  }
+
+  .app-opportunities-table-filter__select-container .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 135px;
+  }
+
+  .app-opportunities-table-filter__select-container .bootstrap-select>.dropdown-toggle {
+    width: 125px;
+    height: 32px;
+  }
+
+  .button__opportunity {
+    & a {
+      margin-left: 10px;
+    }
+  }
+
+}

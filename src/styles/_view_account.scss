@@ -1,0 +1,174 @@
+.app-account-main{
+	width:30%;
+	max-width:570px;
+  &__button-indent {
+    margin-bottom: 50px;
+  }
+	&__notes{
+		margin-top:30px;
+		&-title{
+			padding:15px;
+			color:$color-inactive;
+		}
+		&-text{
+			width:$width-view-account-info;
+			&--little{
+				height: 160px;
+			}
+			&--big{
+				height: 180px;
+			}
+		}
+	}
+	&__company {
+		display: flex;
+    align-items: center;
+    padding-top: 15px;
+
+    &_linked-to {
+      width: 125px;
+      display: inline-block;
+    }
+	}
+	&__site {
+		margin-right: 5px;
+    width: 18px;
+    min-width: 18px;
+	}
+}
+
+.app-account-addition{
+	width:68%;
+	min-width:calc(98% - 570px);
+	&__header{
+		&__data{
+			display: inline-block;
+			margin-left: 15px;
+			font-size: 24px;
+		}
+		&__img{
+			margin-right: 5px;
+			height: 30px;
+			padding-bottom: 5px;
+		}
+	}
+	&__details{
+		min-height:320px;
+		background:$color-new-account;
+		border-radius: 4px;
+		@include border-shadow();
+		&--account{
+			min-height: 400px;
+		}
+		&__column{
+			width:32%;
+			font-weight:inherit;
+			color:$color-inactive;
+		}
+		&__wrapper{
+			padding:20px 20px 15px;
+			color:$color-inactive;
+		}
+	}
+}
+
+.app-account-site{
+	margin-top: 50px;
+	&__header{
+		width: 100%;
+    border-bottom: 1px solid hsla(0,0%,100%,.3);
+	}
+	&__container {
+		padding-bottom: 40px;
+		position: relative;
+		padding-top: 20px;
+	}
+	&__title{
+		margin-bottom: 15px;
+		&--wrapper{
+			margin-right:30px;
+			margin-left: 5px;
+		}
+	}
+	&__name {
+    margin: 0 10px;
+		min-width: 60px;
+	}
+	&__delete{
+		width:22px;
+		padding-bottom: 2px;
+	}
+	&__button{
+		margin-bottom:10px;
+	}
+}
+
+.app-device{
+	&__info{
+		position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px
+	}
+}
+
+.app-account-tabs {
+  &__bottom-indent {
+    margin-bottom: 15px;
+  }
+
+  &__list {
+    margin: 0 0 5px 0;
+    clear: both;
+    display: flex;
+  }
+
+  &__item {
+    width: 20%;
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    text-decoration: none !important;
+    font-weight: $weight-regular;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    z-index: 1;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+
+    &:hover {
+      background-color: $color-active-tab;
+      text-decoration: none;
+
+      &::after {
+        content: '';
+        background-color: $color-active-tab;
+        height: 5px;
+        display: block;
+      }
+    }
+
+    &--active {
+      background-color: $color-active-tab;
+      @include border-shadow();
+      cursor: default;
+      color: #ffffff;
+      z-index: 3;
+
+      &:hover {
+        color: #ffffff;
+      }
+
+      &::after {
+        content: '';
+        background-color: $color-active-tab;
+        height: 5px;
+        display: block;
+      }
+    }
+  }
+}
+
