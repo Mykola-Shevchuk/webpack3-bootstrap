@@ -184,61 +184,123 @@
         </div>
     </div>
 
-    <form class="app-account-site__header">
-        <div class="app-wrapper--inline-block">
-            <div class="app-devices-table__checkbox">
-                <input count-devices="0" count-services="0" class="app-checkbox-input" device="device" id="showBackflow" type="checkbox"
-                       autocomplete="off">
-                <label class="app-checkbox-label" for="showBackflow">Show Backflow</label>
+    <form class="app-account-site__header" id="filter-opportunities-form">
+        <div class="app-account-tabs__bottom-indent app-wrapper">
+            <div class="app-opportunities-table-filter__inputs-container">
+                <div class="app-opportunities-table-filter__inputs--checkbox">
+                    <input class="app-checkbox-input" id="showBackflow-opportunities" value="1" name="division[1]" type="checkbox" checked="checked">
+                    <label class="app-checkbox-label app-opportunities-table-filter__checkbox-label" for="showBackflow-opportunities">Show Backflow</label>
+                </div>
+                <div class="app-opportunities-table-filter__inputs--checkbox">
+                    <input class="app-checkbox-input" id="showFire-opportunities" value="2" name="division[2]" type="checkbox" checked="checked">
+                    <label class="app-checkbox-label" for="showFire-opportunities">Show Fire</label>
+                </div>
             </div>
-            <div class="app-devices-table__checkbox">
-                <input count-devices="1" count-services="1" class="app-checkbox-input" device="device" id="showFire" type="checkbox" checked=""
-                       autocomplete="off">
-                <label class="app-checkbox-label" for="showFire">Show Fire</label>
+            <div class="app-opportunities-table-filter__inputs-container">
+                <div class="app-opportunities-table-filter__inputs--checkbox">
+                    <input class="app-checkbox-input" id="showPlumbing-opportunities" value="3" name="division[3]" type="checkbox" checked="checked">
+                    <label class="app-checkbox-label app-opportunities-table-filter__checkbox-label" for="showPlumbing-opportunities">Show Plumbing</label>
+                </div>
+                <div class="app-opportunities-table-filter__inputs--checkbox">
+                    <input class="app-checkbox-input" id="showAlarm-opportunities" value="4" name="division[4]" type="checkbox" checked="checked">
+                    <label class="app-checkbox-label" for="showAlarm-opportunities">Show Alarm</label>
+                </div>
             </div>
-            <div class="app-devices-table__checkbox">
-                <input count-devices="0" count-services="0" class="app-checkbox-input" device="device" id="showPlumbing" type="checkbox"
-                       autocomplete="off">
-                <label class="app-checkbox-label" for="showPlumbing">Show Plumbing</label>
+
+            <div class="app-opportunities-table-filter__inputs-container">
+                <div class="app-opportunities-table-filter__inputs--select">
+                    <div class="app-opportunities-table-filter__select-label">
+                        <label class="app-color--inactive app-line--right-text">Opportunity Type:</label>
+                    </div>
+                    <div class="app-opportunities-table-filter__select-container">
+                        <div class="btn-group bootstrap-select">
+                            <select class="selectpicker" name="type" tabindex="-98">
+                                <option value="">All</option>
+                                <option value="1">Retest</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-opportunities-table-filter__inputs--select">
+                    <div class="app-opportunities-table-filter__select-label">
+                        <label class="app-color--inactive app-line--right-text">Show Statuses:</label>
+                    </div>
+                    <div class="app-opportunities-table-filter__select-container">
+                        <div class="btn-group bootstrap-select"><select class="selectpicker" name="status" tabindex="-98">
+                            <option value="">All</option>
+                            <option value="1">Send to</option>
+                        </select></div>
+                    </div>
+                </div>
             </div>
-            <div class="app-devices-table__checkbox">
-                <input count-devices="0" count-services="0" class="app-checkbox-input" device="device" id="showAlarm" type="checkbox" autocomplete="off">
-                <label class="app-checkbox-label" for="showAlarm">Show Alarm</label>
+            <div class="app-opportunities-table-filter__inputs-container">
+                <div class="app-opportunities-table-filter__inputs--select">
+                    <div class="app-opportunities-table-filter__select-label">
+                        <label class="app-color--inactive app-line--right-text">Client Type:</label>
+                    </div>
+                    <div class="app-opportunities-table-filter__select-container">
+                        <div class="btn-group bootstrap-select"><select class="selectpicker" name="clientType" tabindex="-98">
+                            <option value="">All</option>
+                            <option value="1">
+                                Active
+                            </option>
+                            <option value="2">
+                                Inactive
+                            </option>
+                            <option value="3">
+                                Special Discount
+                            </option>
+                            <option value="4">
+                                Potential
+                            </option>
+                        </select></div>
+                    </div>
+                </div>
+                <div class="app-opportunities-table-filter__inputs--select">
+                    <div class="app-opportunities-table-filter__select-label">
+                        <label class="app-color--inactive app-line--right-text">Show Lines:</label>
+                    </div>
+                    <div class="app-opportunities-table-filter__select-container">
+                        <div class="btn-group bootstrap-select"><select class="selectpicker" name="pagerCount" tabindex="-98">
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                            <option value="300">300</option>
+                            <option value="500">500</option>
+                            <option value="All">All</option>
+                        </select></div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="app-wrapper--inline-block">
-            <div class="app-opportunities__select app-devices-table__checkbox">
-                <label class="app-color--inactive app-line--right-text">Opportunity Type:</label>
-                <select class="selectpicker">
-                    <option>Social Discount</option>
-                </select>
+
+
+            <div class="app-opportunities-table-filter__inputs-container">
+                <div class="app-opportunities-table-filter__inputs--select">
+                    <div class="app-opportunities-table-filter__select-label">
+                        <label class="app-color--inactive app-line--right-text">Dates:</label>
+                    </div>
+                    <div class="app-opportunities-table-filter__select-container app-opportunities-table-filter__select-container--date">
+                        <input type="text" name="date[from]" id="fromDates-opportunities" class="app-opportunities-table-filter__inputs--date" placeholder="mm/dd/yyyy" value="">
+                        <div class="clear-input-value"></div>
+                    </div>
+                </div>
+                <div class="app-opportunities-table-filter__inputs--select">
+                    <div class="app-opportunities-table-filter__select-label">
+                        <label class="app-color--inactive app-line--right-text">to:</label>
+                    </div>
+                    <div class="app-opportunities-table-filter__select-container app-opportunities-table-filter__select-container--date">
+                        <input type="text" name="date[to]" id="toDates-opportunities" class="app-opportunities-table-filter__inputs--date" placeholder="mm/dd/yyyy" value="">
+                        <div class="clear-input-value"></div>
+                    </div>
+                </div>
             </div>
-            <div class="app-opportunities__select app-devices-table__checkbox">
-                <label class="app-color--inactive app-line--right-text">Show Statuses:</label>
-                <select class="selectpicker">
-                    <option>Social Discount</option>
-                </select>
+            <div class="app-opportunities-table-filter__inputs-container app-opportunities-table-filter__inputs-container--button">
+                <div class="app-detailed__button-container button__opportunity">
+                    <button type="submit" class="app-detailed__button app-detailed__button--blue app-detailed__button--shadow btn">Show</button>
+
+                </div>
             </div>
-            <div class="app-opportunities__select app-devices-table__checkbox">
-                <label class="app-color--inactive app-line--right-text">Client Type:</label>
-                <select class="selectpicker">
-                    <option>Social Discount</option>
-                </select>
-            </div>
-            <div class="app-opportunities__select app-devices-table__checkbox">
-                <label class="app-color--inactive app-line--right-text">Dates:</label>
-                <input class="form-control app-opportunities__input app-wrapper--inline-block">
-            </div>
-            <div class="app-opportunities__select app-devices-table__checkbox">
-                <label class="app-color--inactive app-line--right-text">To:</label>
-                <input class="form-control app-opportunities__input app-wrapper--inline-block">
-            </div>
-            <button type="submit" class="app-link__table-button app-bordered--shadow  app-font--small btn">Show</button>
         </div>
     </form>
-
-
-
 
     <div class="app-data">
         <table class="table app-data__table app-opportunities__table app-table-border app-bordered--shadow">

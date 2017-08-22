@@ -405,5 +405,5 @@
 
   $('.app-validation-phone').mask('(999) 999-9999', {autoclear: false});
   $('.app-validation-date').mask('99/99/9999', {placeholder: 'MM/DD/YYYY', autoclear: false});
-  $('.app-validation-currency').autoNumeric('init', autoNumericOptionsEuro);
+/*  $('.app-validation-currency').autoNumeric('init', autoNumericOptionsEuro);*/
 })(jQuery);
