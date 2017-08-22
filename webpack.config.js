@@ -2,28 +2,24 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const webpack = require('webpack');
 const path = require("path");
-const bootstrapEntryPoints = require('./webpack.bootstrap.config');
 const glob = require('glob');
 
 const isProd = process.env.NODE_ENV === 'production'; //true or false
 const cssDev = [
-	'style-loader',
+	'style-loader?sourceMap',
 	'css-loader?sourceMap',
-	'sass-loader'
+	'sass-loader?sourceMap'
 ];
 const cssProd = ExtractTextPlugin.extract({
-    fallback: 'style-loader',
-    use: ['css-loader','sass-loader'],
+    fallback: 'style-loader?sourceMap',
+    use: ['css-loader?sourceMap','sass-loader?sourceMap'],
     publicPath: '../'
-})
+});
 const cssConfig = isProd ? cssProd : cssDev;
-
-const bootstrapConfig = isProd ? bootstrapEntryPoints.prod : bootstrapEntryPoints.dev;
 
 module.exports = {
     entry: {
-        app: './src/app.js',
-        bootstrap: bootstrapConfig
+        app: './src/app.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -49,8 +45,6 @@ module.exports = {
             },
             { test: /\.(woff2?)$/, use: 'url-loader?limit=10000&name=fonts/[name].[ext]' },
             { test: /\.(ttf|eot)$/, use: 'file-loader?name=fonts/[name].[ext]' },
-            // Bootstrap 3
-            { test:/bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/, use: 'imports-loader?jQuery=jquery' }
         ]
     },
     devServer: {

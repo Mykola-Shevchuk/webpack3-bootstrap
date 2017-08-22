@@ -14,7 +14,7 @@
       _url="cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js";
     if(!_rjs){
       if(_njs){
-        require("jquery-mousewheel")($);
+          $.event.special.mousewheel || $("head").append(decodeURI("%3Cscript src="+_dlp+"//"+_url+"%3E%3C/script%3E"));
       }else{
         /* load jquery-mousewheel plugin (via CDN) if it's not present or not loaded via RequireJS
          (works when mCustomScrollbar fn is called on window load) */
