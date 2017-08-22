@@ -6,7 +6,7 @@
     //position: fixed;
     //height: 100%;
     z-index:2;
-    padding-top: calc(#{$height-header}+45px);
+    padding-top: calc(#{$height-header} + 45px);
     display: table-cell;
     &__icon {
         display: block;

@@ -4,35 +4,17 @@ const webpack = require('webpack');
 const path = require("path");
 const bootstrapEntryPoints = require('./webpack.bootstrap.config');
 const glob = require('glob');
-const PurifyCSSPlugin = require('purifycss-webpack');
 
 const isProd = process.env.NODE_ENV === 'production'; //true or false
 const cssDev = [
 	'style-loader',
 	'css-loader?sourceMap',
-	'sass-loader',
-	{
-		loader: 'sass-resources-loader',
-		options: {
-			// Provide path to the file with resources
-			resources: [
-                './src/styles/resources.scss'
-            ],
-		},
-	}];
+	'sass-loader'
+];
 const cssProd = ExtractTextPlugin.extract({
     fallback: 'style-loader',
-    use: ['css-loader','sass-loader', {
-		loader: 'sass-resources-loader',
-		options: {
-            minimize: true,
-			// Provide path to the file with resources
-			resources: [
-				'./src/styles/resources.scss'
-			],
-		},
-	}],
-    publicPath: '/dist'
+    use: ['css-loader','sass-loader'],
+    publicPath: '../'
 })
 const cssConfig = isProd ? cssProd : cssDev;
 
@@ -44,7 +26,7 @@ module.exports = {
         bootstrap: bootstrapConfig
     },
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js'
     },
     module: {
@@ -72,7 +54,7 @@ module.exports = {
         ]
     },
     devServer: {
-        contentBase: path.join(__dirname, "dist"),
+        contentBase: path.join(__dirname, 'dist'),
         compress: true,
         open: true,
         stats: 'errors-only'
@@ -84,11 +66,9 @@ module.exports = {
             template: './src/index.html'
         }),
         new ExtractTextPlugin({
-            filename: 'css/[name].css',
+            filename: 'styles/[name].css',
             disable: !isProd,
             allChunks: true
-        }),
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NamedModulesPlugin()
+        })
     ]
-}
+};
