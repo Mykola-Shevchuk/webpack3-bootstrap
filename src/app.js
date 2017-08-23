@@ -8,6 +8,10 @@ import table_devices from './scripts/table_devices.js';
 import validation from './scripts/validation.js';
 import main from './scripts/main.js';
 
+import mainTwig from './main.html.twig';
+
+const html = mainTwig({title: 'main title'});
+
 let test = "test";
 console.log(test);
 

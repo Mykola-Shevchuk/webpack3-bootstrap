@@ -31,6 +31,13 @@ module.exports = {
                 test: /\.scss$/, 
                 use: cssConfig
             },
+            { 
+                test: /\.twig$/, 
+                use: [
+                    'twig-loader',
+                    'file-loader?name=[name].[ext]'
+                ]
+            },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
