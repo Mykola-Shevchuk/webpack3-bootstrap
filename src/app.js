@@ -14,5 +14,3 @@ const html = mainTwig({title: 'main title'});
 
 let test = "test";
 console.log(test);
-
-$('body').addClass('new');
