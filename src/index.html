@@ -6,55 +6,486 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Webpack 2 and Twitter Bootstrap</title>
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+    
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <p><img class="img-responsive" src=<%=require("./images/img_twitter-bootstrap.png") %> /></p>
-            </div>
-            <div class="col-md-8">
-                <h1>Webpack 2 and Twitter Bootstrap</h1>
-                <h2>How to configure Webpack 2 to load Twitter Bootstrap SCSS and JavaScript?</h2>
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                    Launch demo modal
-                    </button>
-                
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Dropdown
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                    </ul>
-                </div>
 
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                            </div>
-                            <div class="modal-body">
-                                <p>Some text goes here.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<nav class="app-nav">
+    <div class="app-nav__group app-nav__group--border-no">
+        <div class="app-nav__container">
+            <a class="app-nav__icon" href="#" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                <svg class="app-nav__icon-img" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					 x="0px" y="0px" width="20px" height="20.666px" viewBox="0 0 20 20.666" enable-background="new 0 0 20 20.666" xml:space="preserve">
+						<path class="app-nav__icon-img--grey" d="M20,11.435h-3.077v9.231h-4.615v-6.154H7.692v6.154H3.077v-9.231H0l10.093-9.908L20,11.435z"
+						/>
+					</svg>
+            </a>
+        </div>
+    </div>
+    <div class="app-nav__group">
+        <div class="app-nav__container app-nav__container--active">
+            <a class="app-nav__icon" href="#" data-toggle="tooltip" data-placement="right" title="Clients">
+                <svg class="app-nav__icon-img" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					 x="0px" y="0px" width="19px" height="19px" viewBox="0 0 19 19" enable-background="new 0 0 19 19" xml:space="preserve">
+						<path class="app-nav__icon-img--grey" d="M19,16.736V19H0v-2.264l6.333-4.069v-1.583c-0.391,0-0.752-0.393-1.084-1.18
+										C4.916,9.118,4.75,8.455,4.75,7.917V4.75c0-1.309,0.464-2.428,1.394-3.357C7.072,0.465,8.191,0,9.5,0
+										c1.309,0,2.428,0.465,3.356,1.393c0.929,0.929,1.394,2.048,1.394,3.357v3.167c0,0.538-0.166,1.201-0.499,1.987
+										c-0.332,0.787-0.694,1.18-1.084,1.18v1.583L19,16.736z" />
+					</svg>
+            </a>
+        </div>
+        <div class="app-nav__container">
+            <a class="app-nav__icon " href="#" data-toggle="tooltip" data-placement="right" title="Equipment Database">
+                <svg class="app-nav__icon-img" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					 x="0px" y="0px" width="17px" height="18.545px" viewBox="0 0 17 18.545" enable-background="new 0 0 17 18.545" xml:space="preserve">
+						<path class="app-nav__icon-img--grey" d="M17,0v15.455L15.455,17V1.545H3.864L2.318,3.091h11.591v15.455H0V2.705L2.705,0H17z"
+						/>
+					</svg>
+            </a>
+        </div>
+    </div>
+    <div class="app-nav__group">
+        <div class="app-nav__container">
+            <a class="app-nav__icon" href="#" data-toggle="tooltip" data-placement="right" title="Workorders">
+                <svg class="app-nav__icon-img" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					 x="0px" y="0px" width="17px" height="18.545px" viewBox="0 0 17 18.545" enable-background="new 0 0 17 18.545" xml:space="preserve">
+						<path class="app-nav__icon-img--grey" d="M17,0v18.545H0V0H17z M15.455,3.091H1.545V17h13.909V3.091z M4.636,4.636H3.091v1.545h1.545
+										V4.636z M4.636,7.727H3.091v1.545h1.545V7.727z M4.636,10.818H3.091v1.545h1.545V10.818z M4.636,13.909H3.091v1.545h1.545V13.909z
+										M13.909,4.636H6.182v1.545h7.727V4.636z M13.909,7.727H6.182v1.545h7.727V7.727z M13.909,10.818H6.182v1.545h7.727V10.818z
+										M13.909,15.455H6.182v-1.545h7.727V15.455z" />
+					</svg>
+            </a>
+        </div>
+        <div class="app-nav__container">
+            <a class="app-nav__icon" href="#" data-toggle="tooltip" data-placement="right" title="Proposals">
+                <svg class="app-nav__icon-img" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					 x="0px" y="0px" width="18px" height="16.625px" viewBox="0 0 18 16.625" enable-background="new 0 0 18 16.625" xml:space="preserve">
+						<path class="app-nav__icon-img--grey" d="M16.625,8.025v2.554c0,1.662-0.592,3.086-1.776,4.27c-1.184,1.184-2.607,1.776-4.269,1.776
+										H6.045c-1.662,0-3.086-0.592-4.269-1.776C0.592,13.665,0,12.242,0,10.579V6.045c0-1.662,0.592-3.085,1.776-4.27
+										C2.96,0.592,4.383,0,6.045,0h4.534c0.605,0,1.244,0.116,1.92,0.348l-2.69,2.675H4.534c-0.413,0-0.768,0.149-1.066,0.446
+										C3.171,3.766,3.023,4.121,3.023,4.534v7.557c0,0.413,0.149,0.768,0.446,1.066c0.297,0.297,0.652,0.446,1.066,0.446h7.557
+										c0.413,0,0.768-0.149,1.066-0.446c0.297-0.297,0.446-0.652,0.446-1.066v-1.043L16.625,8.025z M9.446,11.365L18,2.796l-2.055-2.07
+										L9.446,7.239L7.224,5.018L5.169,7.073L9.446,11.365z" />
+					</svg>
+            </a>
+        </div>
+        <div class="app-nav__container">
+            <a class="app-nav__icon" href="#" data-toggle="tooltip" data-placement="right" title="Proposals opportunities">
+                <svg class="app-nav__icon-img" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					 x="0px" y="0px" width="18px" height="16.88px" viewBox="0 0 18 16.88" enable-background="new 0 0 18 16.88" xml:space="preserve">
+						<path class="app-nav__icon-img--grey" d="M16.88,9.929v0.813c0,1.688-0.601,3.133-1.803,4.335c-1.202,1.202-2.647,1.803-4.335,1.803
+										H6.138c-1.688,0-3.133-0.601-4.335-1.803C0.601,13.875,0,12.43,0,10.742V6.138C0,4.45,0.601,3.005,1.803,1.803
+										C3.005,0.601,4.45,0,6.138,0h4.005l0.031,1.228C8.814,1.555,7.698,2.169,6.829,3.069H4.604c-0.42,0-0.78,0.151-1.082,0.453
+										C3.22,3.824,3.069,4.184,3.069,4.604v7.673c0,0.42,0.151,0.78,0.453,1.082c0.302,0.302,0.662,0.453,1.082,0.453h7.673
+										c0.42,0,0.78-0.151,1.082-0.453c0.302-0.302,0.453-0.662,0.453-1.082L16.88,9.929z M12.476,10.266L18,5.294l-5.509-4.88v3.315
+										c-0.072,0-0.169,0.005-0.292,0.015c-0.123,0.01-0.368,0.051-0.736,0.123c-0.369,0.072-0.724,0.166-1.066,0.284
+										c-0.343,0.118-0.734,0.307-1.174,0.568C8.783,4.98,8.391,5.282,8.048,5.624c-0.343,0.343-0.659,0.793-0.951,1.35
+										C6.806,7.532,6.604,8.154,6.491,8.839C6.798,8.45,7.215,8.123,7.742,7.857c0.527-0.266,1.054-0.447,1.581-0.545
+										c0.527-0.097,1.033-0.169,1.52-0.215c0.486-0.046,0.882-0.064,1.189-0.054l0.446,0.015V10.266z" />
+					</svg>
+            </a>
+        </div>
+    </div>
+    <div class="app-nav__group">
+        <div class="app-nav__container">
+            <a class="app-nav__icon" href="#" data-toggle="tooltip" data-placement="right" title="Municipalities">
+                <svg class="app-nav__icon-img" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					 x="0px" y="0px" width="17px" height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
+						<path class="app-nav__icon-img--grey" d="M17,15.455V17H0v-1.545H17z M1.159,13.909h14.682l-1.932-2.318V7.727l1.545-1.545V0h-1.545
+									v3.091h-1.545V0H9.273v3.091H7.727V0H4.636v3.091H3.091V0H1.545v6.182l1.545,1.545v3.864L1.159,13.909z" />
+					</svg>
+            </a>
+        </div>
+        <div class="app-nav__container">
+            <a class="app-nav__icon" href="#" data-toggle="tooltip" data-placement="right" title="Contractors">
+                <svg class="app-nav__icon-img" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					 x="0px" y="0px" width="19px" height="17.417px" viewBox="0 0 19 17.417" enable-background="new 0 0 19 17.417" xml:space="preserve">
+						<path class="app-nav__icon-img--grey" d="M12.667,3.167h4.75c0.433,0,0.805,0.156,1.116,0.467C18.844,3.945,19,4.317,19,4.75v6.333
+										h-7.917V9.5H7.917v1.583H0V4.75c0-0.433,0.156-0.805,0.467-1.116C0.778,3.322,1.15,3.167,1.583,3.167h4.75V1.583
+										c0-0.433,0.156-0.805,0.467-1.116C7.112,0.156,7.484,0,7.917,0h3.167c0.433,0,0.805,0.156,1.116,0.467
+										c0.311,0.311,0.467,0.683,0.467,1.116V3.167z M19,12.667v3.167c0,0.433-0.156,0.805-0.467,1.116
+										c-0.311,0.311-0.683,0.467-1.116,0.467H1.583c-0.433,0-0.805-0.156-1.116-0.467C0.156,16.638,0,16.266,0,15.833v-3.167H19z
+										M7.917,3.167h3.167V1.583H7.917V3.167z" />
+					</svg>
+            </a>
+        </div>
+        <div class="app-nav__container">
+            <a class="app-nav__icon" href="#" data-toggle="tooltip" data-placement="right" title="Settings">
+                <svg class="app-nav__icon-img" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					 x="0px" y="0px" width="18px" height="17.984px" viewBox="0 0 18 17.984" enable-background="new 0 0 18 17.984" xml:space="preserve">
+						<path class="app-nav__icon-img--grey" d="M7.166,15.507c-0.512-0.136-1.003-0.34-1.474-0.612l-0.079-0.047l-2.085,1.27
+										c-0.627-0.481-1.176-1.029-1.646-1.646l1.254-2.101l-0.047-0.079c-0.251-0.46-0.449-0.946-0.596-1.458L2.462,10.74l-2.368-0.596
+										C0.032,9.716,0,9.329,0,8.984c0-0.261,0.032-0.643,0.094-1.145l2.368-0.596L2.493,7.15c0.136-0.481,0.334-0.967,0.596-1.458
+										l0.047-0.078L1.882,3.512c0.481-0.606,1.029-1.155,1.646-1.646l2.085,1.27l0.079-0.047c0.46-0.261,0.951-0.465,1.474-0.611
+										l0.079-0.016l0.595-2.383C8.331,0.026,8.718,0,9,0c0.355,0,0.742,0.026,1.161,0.079l0.595,2.383l0.094,0.016
+										c0.502,0.146,0.988,0.35,1.458,0.611l0.079,0.047l2.101-1.27c0.627,0.491,1.171,1.04,1.631,1.646l-1.254,2.101l0.047,0.078
+										c0.24,0.439,0.444,0.925,0.611,1.458l0.015,0.094l2.383,0.596C17.973,8.31,18,8.691,18,8.984c0,0.355-0.027,0.742-0.079,1.16
+										l-2.383,0.596l-0.015,0.094c-0.157,0.512-0.361,0.998-0.611,1.458l-0.047,0.079l1.254,2.101c-0.502,0.637-1.046,1.186-1.631,1.646
+										l-2.101-1.27l-0.079,0.047c-0.491,0.272-0.978,0.476-1.458,0.612l-0.094,0.031l-0.595,2.368C9.669,17.958,9.282,17.984,9,17.984
+										c-0.355,0-0.742-0.026-1.161-0.078l-0.595-2.368L7.166,15.507z M5.629,8.984c0,0.93,0.329,1.725,0.988,2.383
+										C7.275,12.026,8.07,12.355,9,12.355c0.93,0,1.725-0.329,2.383-0.988c0.658-0.658,0.988-1.453,0.988-2.383
+										c0-0.92-0.329-1.709-0.988-2.368C10.725,5.958,9.93,5.629,9,5.629c-0.93,0-1.725,0.329-2.383,0.988
+										C5.958,7.275,5.629,8.064,5.629,8.984z" />
+					</svg>
+            </a>
+        </div>
+    </div>
+</nav>
+<header class="app-header">
+    <div class="app-header__logo">
+        <a href="#">
+            <img class="app-header__logo-img" src=<%= require("./images/logo.png")%> />
+        </a>
+        <div class="app-header__logo-title">AMERICAN BACKFLOW & FIRE PREVENTION</div>
+    </div>
+    <div class="app-header__logout">
+        <div class="app-header__logout-name">SuperAdmin</div>
+        <a class="app-header__logout-img" href="#">
+            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 width="22.365px" height="19.25px" viewBox="0 0 22.365 19.25" enable-background="new 0 0 22.365 19.25" xml:space="preserve">
+					<g>
+						<path fill="#FFFFFF" d="M6.125,0h7c0.245,0,0.452,0.085,0.621,0.254S14,0.63,14,0.875v1.75c0,0.245-0.085,0.452-0.254,0.621
+						C13.577,3.416,13.37,3.5,13.125,3.5H5.25c-0.479,0-0.89,0.172-1.233,0.516C3.672,4.36,3.5,4.772,3.5,5.25V14
+						c0,0.479,0.172,0.89,0.517,1.234C4.36,15.578,4.771,15.75,5.25,15.75h7.875c0.245,0,0.452,0.085,0.621,0.254S14,16.38,14,16.625
+						v1.75c0,0.245-0.085,0.452-0.254,0.621c-0.169,0.169-0.376,0.254-0.621,0.254h-7c-1.925,0-3.428-0.54-4.506-1.619
+						C0.539,16.552,0,15.05,0,13.125v-7C0,4.2,0.539,2.698,1.619,1.619C2.697,0.54,4.2,0,6.125,0z M16.415,4.078l5.67,4.97
+						c0.187,0.164,0.28,0.356,0.28,0.578s-0.094,0.414-0.28,0.578l-5.67,4.97c-0.187,0.164-0.345,0.216-0.473,0.158
+						c-0.128-0.058-0.192-0.21-0.192-0.455V12.25h-4.375c-0.245,0-0.452-0.084-0.621-0.254c-0.169-0.169-0.254-0.376-0.254-0.621v-3.5
+						c0-0.245,0.085-0.452,0.254-0.621S11.13,7,11.375,7h4.375V4.375c0-0.245,0.064-0.396,0.192-0.455
+						C16.07,3.862,16.228,3.914,16.415,4.078z" />
+					</g>
+				</svg>
+        </a>
+    </div>
+</header>
+
+<div class="app-main">
+    <div class="app-main__page-title app-opportunities__header app-wrapper">
+        <div class="app-main__page-title-name">Opportunities</div>
+        <div class="app-wrapper">
+            <div class="app-common-information__data">58
+                <span class="app-font--small">Accounts</span>
+            </div>
+            <div class="app-common-information__data">348
+                <span class="app-font--small">Opportunities</span>
+            </div>
+            <div class="app-common-information__data">348
+                <span class="app-font--small">Services</span>
+            </div>
+            <div class="app-common-information__data">348
+                <span class="app-font--small">Devices</span>
             </div>
         </div>
     </div>
-</body>
 
+    <form class="app-account-site__header" id="filter-opportunities-form">
+        <div class="app-account-tabs__bottom-indent app-wrapper">
+            <div class="app-opportunities-table-filter__inputs-container">
+                <div class="app-opportunities-table-filter__inputs--checkbox">
+                    <input class="app-checkbox-input" id="showBackflow-opportunities" value="1" name="division[1]" type="checkbox" checked="checked">
+                    <label class="app-checkbox-label app-opportunities-table-filter__checkbox-label" for="showBackflow-opportunities">Show Backflow</label>
+                </div>
+                <div class="app-opportunities-table-filter__inputs--checkbox">
+                    <input class="app-checkbox-input" id="showFire-opportunities" value="2" name="division[2]" type="checkbox" checked="checked">
+                    <label class="app-checkbox-label" for="showFire-opportunities">Show Fire</label>
+                </div>
+            </div>
+            <div class="app-opportunities-table-filter__inputs-container">
+                <div class="app-opportunities-table-filter__inputs--checkbox">
+                    <input class="app-checkbox-input" id="showPlumbing-opportunities" value="3" name="division[3]" type="checkbox" checked="checked">
+                    <label class="app-checkbox-label app-opportunities-table-filter__checkbox-label" for="showPlumbing-opportunities">Show Plumbing</label>
+                </div>
+                <div class="app-opportunities-table-filter__inputs--checkbox">
+                    <input class="app-checkbox-input" id="showAlarm-opportunities" value="4" name="division[4]" type="checkbox" checked="checked">
+                    <label class="app-checkbox-label" for="showAlarm-opportunities">Show Alarm</label>
+                </div>
+            </div>
+
+            <div class="app-opportunities-table-filter__inputs-container">
+                <div class="app-opportunities-table-filter__inputs--select">
+                    <div class="app-opportunities-table-filter__select-label">
+                        <label class="app-color--inactive app-line--right-text">Opportunity Type:</label>
+                    </div>
+                    <div class="app-opportunities-table-filter__select-container">
+                        <div class="btn-group bootstrap-select">
+                            <select class="selectpicker" name="type" tabindex="-98">
+                                <option value="">All</option>
+                                <option value="1">Retest</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-opportunities-table-filter__inputs--select">
+                    <div class="app-opportunities-table-filter__select-label">
+                        <label class="app-color--inactive app-line--right-text">Show Statuses:</label>
+                    </div>
+                    <div class="app-opportunities-table-filter__select-container">
+                        <div class="btn-group bootstrap-select"><select class="selectpicker" name="status" tabindex="-98">
+                            <option value="">All</option>
+                            <option value="1">Send to</option>
+                        </select></div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-opportunities-table-filter__inputs-container">
+                <div class="app-opportunities-table-filter__inputs--select">
+                    <div class="app-opportunities-table-filter__select-label">
+                        <label class="app-color--inactive app-line--right-text">Client Type:</label>
+                    </div>
+                    <div class="app-opportunities-table-filter__select-container">
+                        <div class="btn-group bootstrap-select"><select class="selectpicker" name="clientType" tabindex="-98">
+                            <option value="">All</option>
+                            <option value="1">
+                                Active
+                            </option>
+                            <option value="2">
+                                Inactive
+                            </option>
+                            <option value="3">
+                                Special Discount
+                            </option>
+                            <option value="4">
+                                Potential
+                            </option>
+                        </select></div>
+                    </div>
+                </div>
+                <div class="app-opportunities-table-filter__inputs--select">
+                    <div class="app-opportunities-table-filter__select-label">
+                        <label class="app-color--inactive app-line--right-text">Show Lines:</label>
+                    </div>
+                    <div class="app-opportunities-table-filter__select-container">
+                        <div class="btn-group bootstrap-select"><select class="selectpicker" name="pagerCount" tabindex="-98">
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                            <option value="300">300</option>
+                            <option value="500">500</option>
+                            <option value="All">All</option>
+                        </select></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="app-opportunities-table-filter__inputs-container">
+                <div class="app-opportunities-table-filter__inputs--select">
+                    <div class="app-opportunities-table-filter__select-label">
+                        <label class="app-color--inactive app-line--right-text">Dates:</label>
+                    </div>
+                    <div class="app-opportunities-table-filter__select-container app-opportunities-table-filter__select-container--date">
+                        <input type="text" name="date[from]" id="fromDates-opportunities" class="app-opportunities-table-filter__inputs--date" placeholder="mm/dd/yyyy" value="">
+                        <div class="clear-input-value"></div>
+                    </div>
+                </div>
+                <div class="app-opportunities-table-filter__inputs--select">
+                    <div class="app-opportunities-table-filter__select-label">
+                        <label class="app-color--inactive app-line--right-text">to:</label>
+                    </div>
+                    <div class="app-opportunities-table-filter__select-container app-opportunities-table-filter__select-container--date">
+                        <input type="text" name="date[to]" id="toDates-opportunities" class="app-opportunities-table-filter__inputs--date" placeholder="mm/dd/yyyy" value="">
+                        <div class="clear-input-value"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-opportunities-table-filter__inputs-container app-opportunities-table-filter__inputs-container--button">
+                <div class="app-detailed__button-container button__opportunity">
+                    <button type="submit" class="app-detailed__button app-detailed__button--blue app-detailed__button--shadow btn">Show</button>
+
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="app-data">
+        <table class="table app-data__table app-opportunities__table app-table-border app-bordered--shadow">
+            <thead>
+            <tr class="app-opportunities__table-row--header app-color--inactive">
+                <th class="app-opportunities__division">Division</th>
+                <th>Opportunity Type</th>
+                <th>Days Till Due / From Discovered</th>
+                <th>Due Date / Date Discovered</th>
+                <th>Services (Due/All)</th>
+                <th>Devices (Due/All)</th>
+                <th>Sites (Due/All)</th>
+                <th>Price</th>
+                <th colspan=2>Linked to</th>
+                <th></th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody class="app-data__table-body">
+            <!--account row-->
+            <tr class="app-opportunities__table-row--account">
+                <td colspan="12">
+                    <div class="app-wrapper">
+                        <div class="app-detailed__info app-wrapper">
+                            <div class="app-detailed__info__img app-detailed__info__img--group-site app-account-site__name"></div>
+                            <div class="app-font--medium app-font--bold">
+                                <a class="app-link__select app-link__title " href="#">Acc</a>
+                                <span class="app-line--right-text "> - Some address, City of fdskh, CA 999999</span>
+                                <span class="label label-success app-label app-opportunities__label">Active</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <!--end account row-->
+
+            <!--service row-->
+            <tr class="app-opportunities__table-row--service">
+                <td><img src="images/backflow.svg"></td>
+                <td>
+                    <span class="label label-success app-opportunities__label app-opportunities__label--uppercase">retest</span>
+                </td>
+                <td>10</td>
+                <td>08/08/2018</td>
+                <td>5/20</td>
+                <td>5/20</td>
+                <td>5/20</td>
+                <td>$100</td>
+                <td class="app-devices-table__service-img_company ">
+                    <img class="app-devices-table__service-img_company-icon" src="images/site.svg">
+                </td>
+                <td class="app-opportunities__company app-word-breack">
+                    <a href="#" target="_blank" class="app-link__select">Monarch</a>
+                    <img class="app-contact-list__warning app-contact-list__warning--middle" alt="warning image" src=<%= require("./images/warning.svg") %> />
+                </td>
+                <td></td>
+                <td>
+                    <a class="app-service-label app-service-label--yellow">Create retest notice</a>
+                </td>
+            </tr>
+            <!--end service row-->
+            <!--service row-->
+            <tr class="app-opportunities__table-row--service">
+                <td><img src="images/backflow.svg"></td>
+                <td>
+                    <span class="label label-success app-opportunities__label app-opportunities__label--uppercase">retest</span>
+                </td>
+                <td>10</td>
+                <td>08/08/2018</td>
+                <td>5/20</td>
+                <td>5/20</td>
+                <td>5/20</td>
+                <td>$100</td>
+                <td class="app-devices-table__service-img_company ">
+                    <img class="app-devices-table__service-img_company-icon" src="images/site.svg">
+                </td>
+                <td class="app-word-breack">
+                    <a href="#" target="_blank" class="app-link__select">Monarch</a>
+                    <img class="app-contact-list__warning app-contact-list__warning--middle" alt="warning image" src="images/warning.svg">
+                </td>
+                <td></td>
+                <td>
+                    <a class="app-service-label app-service-label--yellow">Create retest notice</a>
+                </td>
+            </tr>
+            <!--end service row-->
+
+
+            <!--account row-->
+            <tr class="app-opportunities__table-row--account">
+                <td colspan="12">
+                    <div class="app-wrapper">
+                        <div class="app-detailed__info app-wrapper">
+                            <div class="app-detailed__info__img app-detailed__info__img--group-site app-account-site__name"></div>
+                            <div class="app-font--medium app-font--bold">
+                                <a class="app-link__select app-link__title " href="#">Acc</a>
+                                <span class="app-line--right-text "> - Some address, City of fdskh, CA 999999</span>
+                                <span class="label label-success app-label app-opportunities__label">Active</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <!--end account row-->
+
+            <!--service row-->
+            <tr class="app-opportunities__table-row--service">
+                <td><img src="images/backflow.svg"></td>
+                <td>
+                    <span class="label label-success app-opportunities__label app-opportunities__label--uppercase">retest</span>
+                </td>
+                <td>10</td>
+                <td>08/08/2018</td>
+                <td>5/20</td>
+                <td>5/20</td>
+                <td>5/20</td>
+                <td>$100</td>
+                <td class="app-devices-table__service-img_company ">
+                    <img class="app-devices-table__service-img_company-icon" src="images/site.svg">
+                </td>
+                <td class="app-opportunities__company app-word-breack">
+                    <a href="#" target="_blank" class="app-link__select">Monarch</a>
+                    <img class="app-contact-list__warning app-contact-list__warning--middle" alt="warning image" src="images/warning.svg">
+                </td>
+                <td></td>
+                <td>
+                    <a class="app-service-label app-service-label--yellow">Create retest notice</a>
+                </td>
+            </tr>
+            <!--end service row-->
+            <!--service row-->
+            <tr class="app-opportunities__table-row--service">
+                <td><img src="images/backflow.svg"></td>
+                <td>
+                    <span class="label label-success app-opportunities__label app-opportunities__label--uppercase">retest</span>
+                </td>
+                <td>10</td>
+                <td>08/08/2018</td>
+                <td>5/20</td>
+                <td>5/20</td>
+                <td>5/20</td>
+                <td>$100</td>
+                <td class="app-devices-table__service-img_company ">
+                    <img class="app-devices-table__service-img_company-icon" src="images/site.svg">
+                </td>
+                <td class="app-word-breack">
+                    <a href="#" target="_blank" class="app-link__select">Monarch</a>
+                    <img class="app-contact-list__warning app-contact-list__warning--middle" alt="warning image" src="images/warning.svg">
+                </td>
+                <td></td>
+                <td>
+                    <a class="app-service-label app-service-label--yellow">Create retest notice</a>
+                </td>
+            </tr>
+            <!--end service row-->
+
+
+
+            </tbody>
+        </table>
+        <div class="app-data__not-found app-bordered--shadow">No results</div>
+    </div>
+    <div class="pagination  app-bordered--shadow">
+        <a class="app-pagination-arrow" href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a class="app-active-page" href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#">8</a>
+        <a href="#">9</a>
+        <a class="app-pagination-arrow disabled" href="#">&raquo;</a>
+    </div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+<script src="./scripts/scroll.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autonumeric/4.0.3/autoNumeric.min.js"></script>
+
+</body>
 </html>

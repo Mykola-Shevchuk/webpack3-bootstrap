@@ -1,0 +1,56 @@
+@-moz-document url-prefix() {
+    #accountForm .form-control{
+       padding-bottom:3px;
+    }
+    #accountForm .dropdown-toggle{
+       padding: 7px 12px 5px;
+    }
+    .app-detailed__info__data-contacts {
+        padding: 5px 0;
+    }
+    .app-link__wrapper .app-word-breack{
+        @include breakWord(350px);
+    }
+    .app-account-main__notes .app-word-breack{
+        @include breakWord($width-account-notes);
+    }
+    .app-radio:checked + .app-radio-label::before {
+        line-height: 0.45;
+    }
+    body, html{
+        height: 100%;
+    }
+    button.app-form-button {
+      padding-top: 4px;
+    }
+    button.app-search-panel__button {
+      padding-top: 10px;
+    }
+    #imgTrigger.app-detailed__button--blue,
+    .app-modal__footer a.app-detailed__button {
+      padding-top: 5px;
+    }
+    .app-device-styles_table-note td{
+        &:first-child {
+            @include breakWord(140px);
+        }
+        &:last-child {
+            @include breakWord(100px);
+        }
+    }
+
+  .municipalities-agent {
+    &__title {
+      margin-bottom: 24px;
+    }
+  }
+
+  .municipalities-department-contacts {
+    &__title {
+      margin-bottom: 17px;
+    }
+  }
+  .municipalities-channel-table__sendto {
+      @include breakWord(390px);
+  }
+}

@@ -1,0 +1,80 @@
+.app-login {
+    background: $color-content;
+    color: black;
+   // display: flex;
+   // justify-content: center;
+    min-height: 100%;
+   // align-items: center;
+   display: table-cell;
+   vertical-align: middle;
+   &--center{
+       margin: 0 auto;
+   }
+    &__logo{
+            width: $width-login;
+            display: flex;
+            justify-content: center;
+            text-align: left;
+            margin:0 auto;
+            color:white;
+            display: flex;
+        &-header{
+            font-weight: $weight-black;
+            font-size: 40px;
+            padding-left: 10px;
+                width: 465px;
+        }
+        &-img{
+            height: 120px;
+        }
+    }
+    &__error{
+        padding:20px;
+        // margin-top:30px;
+        width: $width-login;
+        margin: 30px auto 0px;
+    }
+    &__form {
+        color:white;
+        width: $width-login;
+        min-height:360px;
+        background: $color-header;
+        text-align: center;
+        padding: 30px 0;
+        margin:0 auto;
+        &-text{
+            color:$color-active;
+            font-weight:$weight-bold;
+            margin-bottom:25px;
+        }
+        &-icon{
+            position:absolute;
+            top: 40px;
+            left: 15px;
+            width: 17px;
+            height: 17px;
+        }
+        &-input{
+            width:465px;
+            height:44px;
+            padding: 0 40px;
+        }
+        &-container{
+            text-align: left;
+            position: relative;
+        }
+    }
+}
+
+.form-control {
+    &.error {
+        border-color: red;
+    }
+}
+
+label.error {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: red;
+}

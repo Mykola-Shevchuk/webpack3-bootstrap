@@ -1,0 +1,100 @@
+.app-devices-table{
+	&__dash{
+		width: 25px;
+		height: 2px;
+		background: rgba(255, 255, 255, 0.5);
+		margin:0 auto;
+		margin-top: 13px;
+	}
+	&__service-img{
+		padding-bottom: 5px;
+    padding-right: 10px;
+
+    &_company {
+      width: 30px;
+			padding-right: 0 !important;
+			&-icon{
+				width:23px;
+			}
+		}
+	}
+	&__checkbox{
+		padding: 0 25px 10px 5px;
+		display: inline-block;
+	}
+	&__button{
+		margin-left: 20px;
+		font-size: 18px;
+		padding: 0 12px;
+    min-width: 119px;
+		&-container{
+			padding: 15px 0;
+		}
+	}
+	&__device{
+		&-type{
+			background: $color-table-title;
+			font-size: 18px;
+		}
+		&-title{
+			color: #b7b7bb;
+			font-weight: $weight-bold;
+		}
+		&-info{
+			color: rgba(255,255,255,0.3);
+		}
+		&-counters{
+			min-width: 282px;
+		}
+	}
+
+  &__nav-icons {
+    width: 50px;
+
+    &_right {
+      text-align: right;
+    }
+	}
+
+	&__header-company {
+		min-width: 155px;
+	}
+
+	&__container {
+		padding-top: 5px;
+		&--empty{
+			margin-top: -20px;
+		}
+	}
+	
+}
+
+.app-data__table>tbody>tr>td.app-devices-table__dash-cell{
+		padding-right: 0;
+		padding-left: 0;
+    width: 40px;
+}
+
+.app-data__table>tbody>tr.app-devices-table__row>td{
+		border-bottom: 1px solid $color-form-border;
+}
+
+.app-data__table>tbody>tr.app-devices-table__row:last-child>td{
+  border-bottom: none;
+}
+
+.app-zebra{
+	background: #393b42;
+}
+
+.app-devices-table__row row-show:first-child {
+  width: 40px;
+}
+
+.app-data__table>tbody>tr.app-devices-table__header-service>td{
+		padding: 10px 8px;
+}
+
+.app-data__table>tbody>tr.app-devices-table__row>td.app-devices-table__service-empty{
+		border-bottom: none;
+}

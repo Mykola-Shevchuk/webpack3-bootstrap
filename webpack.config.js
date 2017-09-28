@@ -2,49 +2,27 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const webpack = require('webpack');
 const path = require("path");
-const bootstrapEntryPoints = require('./webpack.bootstrap.config');
 const glob = require('glob');
-const PurifyCSSPlugin = require('purifycss-webpack');
 
 const isProd = process.env.NODE_ENV === 'production'; //true or false
 const cssDev = [
-	'style-loader',
+	'style-loader?sourceMap',
 	'css-loader?sourceMap',
-	'sass-loader',
-	{
-		loader: 'sass-resources-loader',
-		options: {
-			// Provide path to the file with resources
-			resources: [
-                './src/resources.scss'
-            ],
-		},
-	}];
+	'sass-loader?sourceMap'
+];
 const cssProd = ExtractTextPlugin.extract({
-    fallback: 'style-loader',
-    use: ['css-loader','sass-loader', {
-		loader: 'sass-resources-loader',
-		options: {
-            minimize: true,
-			// Provide path to the file with resources
-			resources: [
-				'./src/resources.scss'
-			],
-		},
-	}],
-    publicPath: '/dist'
-})
+    fallback: 'style-loader?sourceMap',
+    use: ['css-loader?sourceMap','sass-loader?sourceMap'],
+    publicPath: '../'
+});
 const cssConfig = isProd ? cssProd : cssDev;
-
-const bootstrapConfig = isProd ? bootstrapEntryPoints.prod : bootstrapEntryPoints.dev;
 
 module.exports = {
     entry: {
-        app: './src/app.js',
-        bootstrap: bootstrapConfig
+        app: './src/app.js'
     },
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js'
     },
     module: {
@@ -52,6 +30,13 @@ module.exports = {
             {
                 test: /\.scss$/, 
                 use: cssConfig
+            },
+            { 
+                test: /\.twig$/, 
+                use: [
+                    'twig-loader',
+                    'file-loader?name=[name].[ext]'
+                ]
             },
             {
                 test: /\.js$/,
@@ -67,14 +52,11 @@ module.exports = {
             },
             { test: /\.(woff2?)$/, use: 'url-loader?limit=10000&name=fonts/[name].[ext]' },
             { test: /\.(ttf|eot)$/, use: 'file-loader?name=fonts/[name].[ext]' },
-            // Bootstrap 3
-            { test:/bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/, use: 'imports-loader?jQuery=jquery' }
         ]
     },
     devServer: {
-        contentBase: path.join(__dirname, "dist"),
+        contentBase: path.join(__dirname, 'dist'),
         compress: true,
-        hot: true,
         open: true,
         stats: 'errors-only'
     },
@@ -85,11 +67,9 @@ module.exports = {
             template: './src/index.html'
         }),
         new ExtractTextPlugin({
-            filename: 'css/[name].css',
+            filename: 'styles/[name].css',
             disable: !isProd,
             allChunks: true
-        }),
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NamedModulesPlugin()
+        })
     ]
-}
+};

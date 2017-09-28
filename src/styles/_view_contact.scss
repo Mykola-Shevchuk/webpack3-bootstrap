@@ -1,0 +1,54 @@
+.app-contact-main{
+	width:49%;
+	max-width:870px;
+	&__contacts{
+	width:65%;
+	max-width:500px;
+	padding-left:75px;
+	margin-top: 10px;
+	}
+	&__group{
+		border-top: 1px solid $color-form-border;
+		padding:5px;
+		width: 100%;
+	}
+	&__line{
+		padding:5px 0;
+		display: flex;
+		align-items: center;
+		width: 100%;
+	}
+	&__line-text{
+		width: 100%;
+	}
+	&__ext{
+		display: inline-block;
+    padding: 0 5px 0 5%;
+    font-size: 14px;
+	}
+	&__company{
+		width: 57%;
+	}
+	&__notes{
+	width:32%;
+	min-width:calc(97% - 500px);
+	padding-bottom: 5px;
+		&-title{
+			color: hsla(0,0%,100%,.6);
+			margin: -22px 10px 7px;
+			font-size: 18px;
+		}
+		&-text{
+	    overflow: hidden;
+		}
+	}
+}
+
+.app-contact-addition{
+	width:49%;
+	min-width:calc(98% - 870px);
+}
+
+.app-contact-roles>svg{
+	margin: 0 5px;
+}

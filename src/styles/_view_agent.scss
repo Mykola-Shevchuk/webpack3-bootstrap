@@ -1,0 +1,55 @@
+.app-agent{
+	&__container{
+		min-height: 215px;
+		&--big{
+			max-width: 570px;
+			width: 46%;
+		}
+		&--medium{
+			max-width: 430px;
+			width: 25%;
+			margin-left: 2%;
+		}
+	}
+	&__information{
+		width: 100%;
+		height: 100%;
+		padding-right: 20px;
+		margin-left: 15px;
+		&-title{
+			min-width: 105px;
+		}
+		&-data{
+			margin-left: 62px;
+			margin-top: 20px;
+		}
+		&-row{
+			padding-bottom: 15px;
+		}
+	}
+	&__contacts{
+		&-icon{
+			width: 25px;
+		}
+		&-line{
+			padding: 1px 0;
+		}
+	}
+	&__channels {
+		&-title {
+			width: 500px;
+		}
+		&-icon {
+			padding-right: 25px;
+		}
+	}
+}
+.app-table-users>tbody>tr>td.app-agent__contacts-phones{
+	min-width: 320px;
+	width: 320px;
+  padding-left: 50px;
+}
+.app-table-users>tbody>tr>td.app-agent__contacts-empty{
+	border-left:none;
+}
+

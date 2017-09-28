@@ -1,0 +1,235 @@
+.app-toggle-block--inactive{
+    display: none;
+}
+
+.app-common-information {
+    height: 135px;
+    margin: 20px 0 45px;
+    &__block {
+        width: 30%;
+        position: relative;
+    }
+    &__data {
+        font-weight: $weight-bold;
+        font-size: 42px;
+        color:white;
+        position: relative;
+        margin-left:50px;
+        &-name {
+            font-size: 16px;
+            margin-right: 45px;
+        }
+    }
+    &__plus-container {
+        position: absolute;
+        bottom: 5px;
+        right: 0px;
+    }
+    &__plus {
+        position: relative;
+        width: 34px;
+        height: 34px;
+        border-radius: 6px;
+        background: $color-active;
+        cursor: pointer;
+        @include border-shadow();
+        &--horizontal {
+            position: absolute;
+            background-color: white;
+            width: 18px;
+            height: 3px;
+            top: 15.5px;
+            left: 7px;
+        }
+        &--vertical {
+            position: absolute;
+            background-color: white;
+            width: 3px;
+            height: 18px;
+            top: 8px;
+            left: 15px;
+        }
+    }
+}
+
+.app-search-panel {
+    &__container{
+        position: relative;
+        width: $width-search-input;
+        max-width: $max-width-search-input;
+    }
+    &__icon-search {
+        position: absolute;
+        color: $color-search-panel;
+        top: 10px;
+        left: 15px;
+    }
+    &__icon-settings {
+        position: absolute;
+        top: 13px;
+        right: 20px;
+        fill: $color-search-panel;
+        cursor: pointer;
+        &:hover{
+            fill: $color-active;
+        }
+        &--active{
+            fill: $color-active;
+        }
+    }
+    &__input {
+        font-weight: $weight-regular;
+        height: 44px;
+        padding: 0 45px;
+        font-size: 16px;
+        color: $color-search-panel;
+    }
+    &__button {
+        font-weight: $weight-black;
+        display: block;
+        background: $color-active;
+        height: 44px;
+        width: 8%;
+        max-width: 120px;
+    }
+}
+
+.app-search-options {
+    margin-top:25px;
+    background: $color-active-tab;
+    @include border-shadow();
+    border-radius: 4px;
+    &__wrapper{
+        width: 32%;
+        max-width: 375px;
+        min-height: 160px;
+        margin: 15px 20px 25px;
+        border-right: 2px solid rgba(45, 48, 56, 0.7);
+        &:last-child{
+            border: none;
+        }
+    }
+    &__title {
+        font-weight: $weight-bold;
+    }
+}
+
+.app-data {
+    margin: 50px 0 25px;
+    &__not-found{
+       font-size: 45px;
+       background: $color-active-tab;
+       text-align: center;
+       margin-top: 3px;
+       border-radius: 4px;
+       padding: 40px 0;
+       color: $color-inactive;
+       margin-bottom: 20px;
+    }
+    &__table{
+        border-radius:4px;
+        z-index: 0;
+        position: relative;
+        margin-top: 2px;
+        border-collapse: separate;
+        border-spacing: 0;
+        overflow: hidden;
+        &-header{
+            color:$color-inactive;
+            background: $color-active-tab;
+            border-bottom: 1px solid $color-border;
+            &--fire{
+                background-image: url("./../images/fire.svg");
+            }
+            &--plumbing{
+                background-image: url("./../images/plumbing.svg");
+            }
+            &--backflow{
+                background-image: url("./../images/backflow.svg");
+            }
+            &--alarm{
+                background-image: url("./../images/alarm.svg");
+            }
+            &--img{
+                background-position: 50%;
+                background-repeat: no-repeat;
+                background-size: 20px;
+            }
+        }
+        &-body{
+            background: $color-header;
+        }
+        &-row{
+            &--close{
+                background:$color-close-row;
+            }
+        }
+        &-cell{
+            &--center{
+                text-align: center;
+            }
+            &--min{
+                min-width:95px;
+            }
+            &--mailing{
+                max-width: 300px;
+            }
+            &--cod{
+                min-width: 90px;
+            }
+        }
+        &-data{
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            width:40px;
+            &--group{
+                background-image: url("./../images/group_site.svg");
+                background-position: 50% 12px;
+            }
+            &--site{
+                background-image: url("./../images/site.svg");
+                background-position: 50% 15px;
+            }
+            &--contact{
+                background-image: url("./../images/contact.svg");
+                background-size: 17px;
+                background-position: 50% 10px;
+            }
+            &--company{
+                background-image: url("./../images/company.svg");
+                background-size: 21px;
+                background-position: 50% 12px;
+            }
+            &--arrow-top{
+                background-image: url("./../images/arrow-top.svg");
+            }
+            &--arrow-bottom{
+                background-image: url("./../images/arrow-bottom.svg");
+            }
+            &--arrow-gray{
+              background-image: url("./../images/arrow-gray.svg");
+              background-size: 21px;
+            }
+            &--location{
+                background-image: url("./../images/location.svg");
+            }
+            &--check{
+                height: 20px;
+            }
+            &--minus{
+                height: 5px;
+                width: 30px;
+                background: hsla(0,0%,100%,.3);
+                border-radius: 2px;
+                margin: 11px auto 0;
+            }
+        }
+    }
+}
+
+.app-select-site-account {
+  &__linked-to {
+    display: block;
+    min-width: 175px;
+  }
+}

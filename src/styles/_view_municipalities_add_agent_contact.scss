@@ -1,0 +1,21 @@
+.app-add-agent-contact {
+  overflow: hidden;
+
+  &__page-name {
+    min-width: 750px;
+  }
+
+  &__list {
+    margin-top: 0;
+  }
+
+  &__icon {
+    width: 25px;
+    float: right;
+  }
+
+  &__buttons {
+    float: right;
+    margin: 20px 0 40px 0;
+  }
+}

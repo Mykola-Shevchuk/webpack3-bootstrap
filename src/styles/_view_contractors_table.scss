@@ -1,0 +1,54 @@
+.app-contractors-table {
+  width: 100%;
+
+  &_style {
+    margin-top: 45px;
+  }
+}
+
+.app-contractors-search-options {
+  display: flex;
+
+  &__wrapper {
+    max-width: 250px;
+    min-height: 70px;
+    border-right: 0;
+  }
+}
+
+.contractors-table {
+  background-color: #3d3f47;
+  border-radius: 4px;
+
+  & tr, th, td {
+    border-top: 0 !important;
+  }
+
+  & thead tr > th, tr:not(:last-child) {
+    border-bottom: 1px solid hsla(230,3%,47%,.3);
+  }
+
+  &__icon-block {
+    width: 60px;
+
+    & div {
+      padding-left: 10px;
+    }
+
+    &--gauge {
+      width: 30px;
+    }
+  }
+
+  &__img {
+    width: 27px;
+    display: block;
+    margin: 2px auto 0;
+  }
+
+  &_label {
+    margin-left: 0;
+  }
+}
+
+

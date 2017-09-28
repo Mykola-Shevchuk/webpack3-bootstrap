@@ -1,0 +1,199 @@
+.app-contact-list{
+    &__container{
+        &--colored{
+            background: $color-new-account;
+            border-radius: 4px;
+        }
+        &--main{
+            padding: 20px 0 40px;
+            margin: 0 auto;
+            max-width: 1470px;
+            width:80%;
+        }
+        &--title{
+            color: $color-inactive;
+            font-size: 28px;
+            font-weight: $weight-bold;
+            padding-bottom: 10px;
+        }
+        &--table{
+            border-top: 1px solid $color-title-border;
+            padding-top: 10px;
+        }
+        &--scroll{
+            padding: 0;
+        }
+        &--theader{
+            padding: 0;
+            overflow-x: hidden;
+        }
+        &--tbody{
+            height: 360px;
+            overflow: hidden;
+        }
+        &--button{
+            padding: 7px;
+        }
+    }
+    &__contact{
+        &-icon{
+        margin-right:10px;
+        width:18px;
+        padding-bottom: 7px;
+        }
+        &-name{
+        font-size: 20px;
+        }
+    }
+    &__table{
+        margin-bottom: 0;
+    }
+    &__company{
+        &-icon{
+        width: 20px;
+        margin: 0 5px;
+        }
+    }
+    &__minus{
+        width: 35px;
+        height: 5px;
+        background: $color-title-border;
+        border-radius: 2px;
+        margin: 0 auto;
+    }
+    &__warning{
+        padding-bottom: 3px;
+     &--big{
+        width: 20px;
+        margin-right: 7px;
+       float: left;
+     }
+     &--middle{
+       width: 17px;
+       margin-right: 7px;
+     }
+    &--large{
+      width: 30px;
+    }
+    }
+    &__no-contact{
+        margin: 10px 12px;
+        &--wrapper{
+            padding-bottom: 20px;
+        }
+    }
+    &__button{
+        text-decoration: none;
+        padding: 2px 12px;
+        width:130px;
+    }
+}
+
+.app-contact-list__authorizer svg{
+     margin: 5px;
+ }
+
+.app-contact-list__table>thead>tr>th, .app-contact-list__table>tbody>tr>td{
+     border-bottom: none;
+     border-top:none;
+ }
+
+.app-contact-list__table--large>thead>tr>th {
+    border-top-left-radius:4px;
+    border-top-right-radius:4px;
+}
+
+.app-contact-list__table>thead>tr>th:first-child, .app-contact-list__table>tbody>tr>td:first-child{
+     padding-left: 15px;
+     text-align: left;
+ }
+
+.app-contact-list__table>thead>tr>th{
+    font-weight: $weight-bold;
+    text-align: center;
+    padding: 8px 0px;
+}
+
+.app-contact-list__table>tbody>tr>td{
+    border-bottom: 1px solid $color-form-border;
+    border-left: 1px solid $color-form-border;
+}
+
+.app-contact-list__table>tbody>tr>td:first-child, .app-contact-list__table>tbody>tr>td:nth-child(2){
+    border-left:none;
+}
+
+ .app-contact-list__table .app-contact-main__line{
+     padding: 2px 0;
+ }
+
+ .app-contact-list__table tr>td:first-child .app-contact-main__line{
+     font-size: 14px;
+ }
+
+ .app-contact-list__table tr>td:nth-child(2) .app-contact-main__line{
+     padding-left: 10px;
+     font-size: 14px;
+ }
+
+ .app-contact-list__table tr>td:nth-child(3), .app-contact-list__table tr>td:nth-child(4), .app-contact-list__table tr>td:nth-child(5),.app-contact-list__table tr>td:last-child{
+     vertical-align: middle;
+     text-align: center;
+     padding: 8px 3px;
+ }
+
+ .app-contact-list__table tr.app-contact__last-row>td{
+    border-bottom: none;
+}
+
+ .primary-account-block {
+
+   &__separator {
+
+     &__content {
+       width: 49%;
+       display: inline-block;
+       vertical-align: top;
+     }
+
+   }
+  }
+
+ .app-contact-list__table--small tr>td:nth-child(3), .app-contact-list__table--small tr>th:nth-child(2) {
+     width: 90px;
+     min-width: 90px;
+ }
+
+ .app-contact-list__table--small tr>td:nth-child(4), .app-contact-list__table--small tr>th:nth-child(3), .app-contact-list__table--small tr>td:last-child, .app-contact-list__table--small tr>th:last-child {
+     width: 90px;
+     min-width: 90px;
+ }
+
+.app-contact-list__table--large tr>td:first-child{
+ min-width: 180px;
+}
+
+.app-contact-list__table--large tr>td:nth-child(2){
+    max-width: 660px;
+}
+
+.app-contact-list__table--large tr>td:nth-child(3){
+    width: 100px;
+}
+
+.app-contact-list__table--large tr>td:nth-child(4){
+    width: 70px;
+}
+
+.app-contact-list__table--large tr>td:nth-child(5){
+    width: 90px;
+}
+
+.app-contact-list__table--large tr>td:last-child{
+    width: 180px;
+}
+
+
+
+
+

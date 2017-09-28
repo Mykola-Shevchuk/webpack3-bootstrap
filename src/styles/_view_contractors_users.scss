@@ -1,0 +1,223 @@
+.app-wrapper-contractors-users {
+  min-height: 320px;
+}
+
+.app-contractor-users-block {
+  &:not(:last-child) {
+    margin-right: 2%;
+  }
+
+  &:last-child {
+    width: 30%;
+  }
+}
+
+.app-contractor-users-profile {
+  width: 70%;
+
+  &_buttons {
+    min-height: 40px;
+    /*margin-bottom: 50px;*/
+  }
+
+  &__block {
+    width: calc(100% - 2 * 215px - 15px - 2%);
+    margin-left: 15px;
+  }
+
+  &__photos {
+    margin-left: 2%;
+  }
+
+  &__photos-block {
+    &_image {
+      width: 215px;
+      height: 215px;
+      background-color: #2d3038;
+    }
+
+    &:first-child {
+      margin-right: 15px;
+    }
+  }
+
+  &__photos-block-content {
+    width: 215px;
+    height: 215px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    &_no-data {
+      width: 20px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__photos-title {
+    margin-bottom: 15px;
+    color: hsla(0,0%,100%,.6);
+  }
+
+  &__role {
+    margin-top: 0;
+  }
+
+  &__colored-line {
+    margin: 5px 0;
+    display: inline-block;
+  }
+
+  &__table {
+    margin-top: 10px;
+
+    &_mail {
+      width: 64%;
+      margin-right: 15px;
+    }
+
+    &_cells {
+      min-width: 250px;
+
+    }
+
+    & td {
+      padding-bottom: 10px;
+    }
+
+    & td:nth-child(odd) {
+      color: hsla(0,0%,100%,.6);
+      padding-right: 5px;
+      vertical-align: top;
+    }
+  }
+}
+
+.app-contractor-users-statistics {
+  min-height: 430px;
+}
+
+.app-contractor-users-licenses {
+  clear: both;
+
+  &-content {
+    height: auto;
+  }
+
+  &-table {
+    & td {
+      padding: 13px 10px;
+
+      &:first-child {
+        padding-left: 20px;
+      }
+
+      &:last-child {
+        padding-right: 20px;
+      }
+    }
+
+    & thead>tr{
+      border-bottom: 1px solid $color-form-border;
+    }
+
+    & tr:not(:last-child) {
+      border-bottom: 1px solid $color-form-border;
+    }
+
+    &__icons {
+      width: 25px;
+
+      &_all {
+        width: 16px;
+        height: 19px;
+      }
+
+      &_fire {
+        width: 16px;
+        height: 19px;
+      }
+
+      &_backflow {
+        width: 14px;
+        height: 20px;
+      }
+
+      &_tool {
+        width: 18px;
+        height: 18px;
+      }
+
+      &_alarm {
+        width: 20px;
+        height: 19px;
+      }
+
+      &_circle {
+        width: 18px;
+      }
+
+      &_edit {
+        width: 16px;
+      }
+
+      &_delete {
+        width: 15px;
+      }
+    }
+  }
+}
+
+.app-contractor-users-gauges {
+  clear: both;
+
+  &__view-icon {
+    width: 18px;
+    display: block;
+    margin: 2px auto 0;
+  }
+
+  &__name {
+    padding-left: 10px;
+  }
+
+  &__icon-name {
+    display: inline-block;
+    margin: 0;
+    width: 18px;
+    vertical-align: text-bottom;
+  }
+}
+
+.app-contractor-users-comments {
+  display: flex;
+  height: 320px;
+
+  &-block {
+    width: 50%;
+
+    &:not(:last-child) {
+      margin-right: 6%;
+    }
+
+    &__button-container {
+      min-height: 33px;
+    }
+  }
+}
+
+.app-contractor-users__addition-content {
+  min-width: 200px;
+}
+
+.app-contractor-users-statistics {
+  margin-top: 40px;
+}
+
+.correct-position-contractor-user-logo {
+  width: 40px;
+  background-position: 60% 30px;
+}

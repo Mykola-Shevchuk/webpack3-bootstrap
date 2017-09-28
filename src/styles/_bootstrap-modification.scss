@@ -1,0 +1,172 @@
+.glyphicon.glyphicon-search {
+    font-size: 23px;
+}
+
+.btn:hover:not(.dropdown-toggle),
+.btn:focus:not(.dropdown-toggle),
+.btn:active:not(.dropdown-toggle) {
+    color: white;
+    outline: none;
+}
+
+.btn.active, .btn:active {
+   box-shadow: none;
+}
+
+.tooltip>.tooltip-inner {
+    background-color: $color-active;
+    padding: 5px 10px;
+}
+
+.tooltip.right .tooltip-arrow {
+    top: 50%;
+    left: -10px;
+    margin-top: -9px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 15px solid $color-active;
+}
+
+.tooltip.right {
+    margin-left: 25px;
+    font-weight: $weight-bold;
+    font-size: 16px;
+}
+
+.nav-tabs>li>a {
+    background: $color-content;
+    color: $color-inactive;
+    font-weight: $weight-regular;
+    position: relative;
+    margin-right: 0;
+    border:none;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+    color: white;
+    background-color: $color-active-tab;
+    border: none;
+    position: relative;
+    z-index: 1;
+    @include border-shadow();
+    &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 42px;
+        bottom: 0;
+        left: 0px;
+        right: 0px;
+        z-index: 10;
+        background: #3D3F47;
+        height: 12px;
+    }
+}
+
+.nav>li>a:focus,
+.nav>li>a:hover {
+    background-color: $color-active-tab;
+    border: none;
+}
+
+.nav>li {
+    width: 220px;
+    text-align: center;
+    font-weight: $weight-bold;
+}
+
+.nav-tabs>li{
+    margin-bottom: 4px;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.app-data__table>thead>tr>th{
+    border-bottom: 1px solid $color-title-border;
+}
+
+.app-data__table>tbody>tr>td{
+    border-top:none;
+    border-bottom: 1px solid $color-title-border;
+}
+
+.app-data__table>tbody>tr>td.app-deleted {
+    border-bottom: 1px solid hsla(0,0%,100%,.7);
+}
+
+// #panel1 .app-data__table tr>td:first-child,
+ .app-data__table tr:last-child>td, .app-data__table>tbody>tr:last-child>td.app-deleted{
+    border-bottom: none;
+}
+
+.pagination {
+    display: inline-block;
+    background: $color-active-tab;
+}
+
+.pagination a {
+    color: white;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-left: 1px solid $color-border;
+}
+
+.pagination a:first-child{
+    border-left:none;
+}
+
+.pagination a.app-active-page {
+    background-color:$color-active;
+}
+
+.pagination a:hover:not(.app-active-page) {background-color: $color-title-border;}
+
+.pagination a:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.pagination a:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.bootstrap-select.btn-group .dropdown-menu {
+    border: 1px solid white;
+}
+
+.pagination .disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.label {
+    padding: .2em .4em;
+    margin-left: 10px;
+}
+
+.has-error .bootstrap-select .dropdown-toggle {
+    border-color: red;
+}
+
+.table-search-icons {
+  height: 27px;
+  background-position: center;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: 23px;
+}
+
+.table > thead > tr > th {
+  vertical-align: top !important;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+  text-overflow: ellipsis;
+}
+

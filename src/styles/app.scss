@@ -1,0 +1,84 @@
+@import "_variables",
+        "_nav",
+        "_header",
+        "_common",
+        "_login_page",
+        "_search_page",
+        "_form",
+        "_bootstrap-modification",
+        "_view_account",
+        "_create_contacts",
+        "_modal",
+        "_detailed_view",
+        "_view_contact",
+        "_contact_sprite",
+        "_search_link",
+        "_normalize",
+        "_contact_list_table",
+        "_set_role",
+        "_form_device",
+        "_table_of_devices",
+        "_view_device",
+        "_scroll",
+        "_view_contractor",
+        "_view_contractors_table",
+        "_form_service",
+        "_view_contractors_users",
+        "_view_municipalities",
+        "_view_municipalities_list",
+        "_view_agent",
+        "_view_municipalities_add_agent_contact",
+        "_view_agents_list",
+        "_view_opportunities",
+        "_firefox_fixes",
+        "_media_queries";
+
+html,
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    //height: 100%;
+    min-height: 100vh;
+    font-size: 16px;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background: $color-content;
+    width: 100%;
+    display: table;
+    position: relative;
+}
+
+body, label, table, div, th, td, input, button, span{
+    font-weight:300;
+}
+
+canvas {
+    display: block;
+}
+
+textarea{
+    resize: none;
+}
+
+td>a, td>a:hover, td>a:focus, td>a:active{
+    color:inherit;
+    text-decoration: underline;
+}
+a, a:focus, a:visited, a:hover, a:active{
+    color: inherit;
+    outline: none;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    text-transform: none;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    text-transform: none;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    text-transform: none;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    text-transform: none;
+}
